@@ -1,0 +1,39 @@
+﻿<Page x:Class="QUIZ_PROJECT.QuizzesPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      Title="Manage Quizzes" Background="AliceBlue">
+
+    <ScrollViewer VerticalScrollBarVisibility="Auto">
+        <Grid Margin="10">
+            <StackPanel>
+                <TextBlock Text="Manage Quizzes" FontSize="20" FontWeight="Bold" Margin="0,0,0,10"/>
+
+                <!-- Table of Quizzes -->
+                <DataGrid x:Name="QuizzesDataGrid" AutoGenerateColumns="False" Margin="0,0,0,10" SelectionChanged="QuizzesDataGrid_SelectionChanged">
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Header="Title" Binding="{Binding Title}" Width="100"/>
+                        <DataGridTextColumn Header="Category" Binding="{Binding Category.Name}" Width="100"/>
+                        <DataGridTemplateColumn Header="Actions" Width="150">
+                            <DataGridTemplateColumn.CellTemplate>
+                                <DataTemplate>
+                                    <StackPanel Orientation="Horizontal">
+                                        <Button Content="Edit" Margin="0,0,5,0" Click="EditQuiz_Click"/>
+                                        <Button Content="Delete" Margin="0,0,5,0" Click="DeleteQuiz_Click"/>
+                                        <Button Content="Manage Questions" Click="ManageQuestions_Click"/>
+                                    </StackPanel>
+                                </DataTemplate>
+                            </DataGridTemplateColumn.CellTemplate>
+                        </DataGridTemplateColumn>
+                    </DataGrid.Columns>
+                </DataGrid>
+
+                <!-- Add New Quiz -->
+                <StackPanel Orientation="Horizontal" Margin="0,10,0,0">
+                    <TextBox x:Name="QuizTitleTextBox" Width="200" Margin="0,0,5,0"/>
+                    <ComboBox x:Name="CategoryComboBox" Width="150" DisplayMemberPath="Name" SelectedValuePath="Id"/>
+                    <Button Content="Add Quiz" Click="AddQuiz_Click" Margin="5,0,0,0"/>
+                </StackPanel>
+            </StackPanel>
+        </Grid>
+    </ScrollViewer>
+</Page>

@@ -1,0 +1,176 @@
+﻿<Page x:Class="QUIZ_PROJECT.ManageQuestionsPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:sys="clr-namespace:System;assembly=mscorlib"
+      Title="Manage Questions" Background="AliceBlue">
+
+    <ScrollViewer VerticalScrollBarVisibility="Auto">
+        <Grid Margin="10">
+            <StackPanel>
+                <TextBlock Text="Manage Questions" FontSize="20" FontWeight="Bold" Margin="0,0,0,10"/>
+
+                <!-- Table of Questions -->
+                <DataGrid x:Name="QuestionsDataGrid" AutoGenerateColumns="False" Margin="0,0,0,10">
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Header="Question Text" Binding="{Binding Text}" Width="200"/>
+                        <DataGridTemplateColumn Header="Actions" Width="150">
+                            <DataGridTemplateColumn.CellTemplate>
+                                <DataTemplate>
+                                    <StackPanel Orientation="Horizontal">
+                                        <Button Content="Edit" Margin="0,0,5,0" Click="EditQuestion_Click"/>
+                                        <Button Content="Delete" Click="DeleteQuestion_Click"/>
+                                    </StackPanel>
+                                </DataTemplate>
+                            </DataGridTemplateColumn.CellTemplate>
+                        </DataGridTemplateColumn>
+                    </DataGrid.Columns>
+                </DataGrid>
+
+                <!-- Add New Question Section -->
+                <TextBlock Text="Add New Question" FontSize="16" FontWeight="Bold" Margin="0,20,0,10"/>
+
+                <!-- Question Text with Placeholder -->
+                <Grid Margin="0,0,0,10">
+                    <TextBox x:Name="QuestionTextBox" Width="300"/>
+                    <TextBlock Text="Enter question text" 
+                               Foreground="Gray" 
+                               IsHitTestVisible="False"
+                               VerticalAlignment="Center" 
+                               Margin="38,0,26,0">
+                        <TextBlock.Style>
+                            <Style TargetType="TextBlock">
+                                <Style.Triggers>
+                                    <DataTrigger Binding="{Binding Text, ElementName=QuestionTextBox}" Value="">
+                                        <Setter Property="Visibility" Value="Visible"/>
+                                    </DataTrigger>
+                                    <DataTrigger Binding="{Binding Text, ElementName=QuestionTextBox}" Value="{x:Null}">
+                                        <Setter Property="Visibility" Value="Visible"/>
+                                    </DataTrigger>
+                                    <DataTrigger Binding="{Binding Text, ElementName=QuestionTextBox}">
+                                        <Setter Property="Visibility" Value="Collapsed"/>
+                                    </DataTrigger>
+                                </Style.Triggers>
+                            </Style>
+                        </TextBlock.Style>
+                    </TextBlock>
+                </Grid>
+
+                <!-- Answer Options with Placeholders -->
+                <TextBlock Text="Answer Options" FontSize="14" FontWeight="Bold" Margin="0,10,0,5"/>
+                <StackPanel Margin="0,0,0,10">
+
+                    <!-- Answer A -->
+                    <Grid Margin="0,5,0,0">
+                        <RadioButton GroupName="CorrectAnswer" Content="A" Margin="0,0,5,0" Checked="CorrectAnswer_Checked"/>
+                        <TextBox x:Name="AnswerATextBox" Width="250"/>
+                        <TextBlock Text="Answer A" 
+                                   Foreground="Gray" 
+                                   IsHitTestVisible="False"
+                                   VerticalAlignment="Center" 
+                                   Margin="63,0,51,0">
+                            <TextBlock.Style>
+                                <Style TargetType="TextBlock">
+                                    <Style.Triggers>
+                                        <DataTrigger Binding="{Binding Text, ElementName=AnswerATextBox}" Value="">
+                                            <Setter Property="Visibility" Value="Visible"/>
+                                        </DataTrigger>
+                                        <DataTrigger Binding="{Binding Text, ElementName=AnswerATextBox}" Value="{x:Null}">
+                                            <Setter Property="Visibility" Value="Visible"/>
+                                        </DataTrigger>
+                                        <DataTrigger Binding="{Binding Text, ElementName=AnswerATextBox}">
+                                            <Setter Property="Visibility" Value="Collapsed"/>
+                                        </DataTrigger>
+                                    </Style.Triggers>
+                                </Style>
+                            </TextBlock.Style>
+                        </TextBlock>
+                    </Grid>
+
+                    <!-- Answer B -->
+                    <Grid Margin="0,5,0,0">
+                        <RadioButton GroupName="CorrectAnswer" Content="B" Margin="0,0,5,0" Checked="CorrectAnswer_Checked"/>
+                        <TextBox x:Name="AnswerBTextBox" Width="250"/>
+                        <TextBlock Text="Answer B" 
+                                   Foreground="Gray" 
+                                   IsHitTestVisible="False"
+                                   VerticalAlignment="Center" 
+                                   Margin="63,0,51,0">
+                            <TextBlock.Style>
+                                <Style TargetType="TextBlock">
+                                    <Style.Triggers>
+                                        <DataTrigger Binding="{Binding Text, ElementName=AnswerBTextBox}" Value="">
+                                            <Setter Property="Visibility" Value="Visible"/>
+                                        </DataTrigger>
+                                        <DataTrigger Binding="{Binding Text, ElementName=AnswerBTextBox}" Value="{x:Null}">
+                                            <Setter Property="Visibility" Value="Visible"/>
+                                        </DataTrigger>
+                                        <DataTrigger Binding="{Binding Text, ElementName=AnswerBTextBox}">
+                                            <Setter Property="Visibility" Value="Collapsed"/>
+                                        </DataTrigger>
+                                    </Style.Triggers>
+                                </Style>
+                            </TextBlock.Style>
+                        </TextBlock>
+                    </Grid>
+
+                    <!-- Answer C -->
+                    <Grid Margin="0,5,0,0">
+                        <RadioButton GroupName="CorrectAnswer" Content="C" Margin="0,0,5,0" Checked="CorrectAnswer_Checked"/>
+                        <TextBox x:Name="AnswerCTextBox" Width="250"/>
+                        <TextBlock Text="Answer C" 
+                                   Foreground="Gray" 
+                                   IsHitTestVisible="False"
+                                   VerticalAlignment="Center" 
+                                   Margin="64,0,51,0">
+                            <TextBlock.Style>
+                                <Style TargetType="TextBlock">
+                                    <Style.Triggers>
+                                        <DataTrigger Binding="{Binding Text, ElementName=AnswerCTextBox}" Value="">
+                                            <Setter Property="Visibility" Value="Visible"/>
+                                        </DataTrigger>
+                                        <DataTrigger Binding="{Binding Text, ElementName=AnswerCTextBox}" Value="{x:Null}">
+                                            <Setter Property="Visibility" Value="Visible"/>
+                                        </DataTrigger>
+                                        <DataTrigger Binding="{Binding Text, ElementName=AnswerCTextBox}">
+                                            <Setter Property="Visibility" Value="Collapsed"/>
+                                        </DataTrigger>
+                                    </Style.Triggers>
+                                </Style>
+                            </TextBlock.Style>
+                        </TextBlock>
+                    </Grid>
+
+                    <!-- Answer D -->
+                    <Grid Margin="0,5,0,0">
+                        <RadioButton GroupName="CorrectAnswer" Content="D" Margin="0,0,5,0" Checked="CorrectAnswer_Checked"/>
+                        <TextBox x:Name="AnswerDTextBox" Width="250"/>
+                        <TextBlock Text="Answer D" 
+                                   Foreground="Gray" 
+                                   IsHitTestVisible="False"
+                                   VerticalAlignment="Center" 
+                                   Margin="64,0,51,0">
+                            <TextBlock.Style>
+                                <Style TargetType="TextBlock">
+                                    <Style.Triggers>
+                                        <DataTrigger Binding="{Binding Text, ElementName=AnswerDTextBox}" Value="">
+                                            <Setter Property="Visibility" Value="Visible"/>
+                                        </DataTrigger>
+                                        <DataTrigger Binding="{Binding Text, ElementName=AnswerDTextBox}" Value="{x:Null}">
+                                            <Setter Property="Visibility" Value="Visible"/>
+                                        </DataTrigger>
+                                        <DataTrigger Binding="{Binding Text, ElementName=AnswerDTextBox}">
+                                            <Setter Property="Visibility" Value="Collapsed"/>
+                                        </DataTrigger>
+                                    </Style.Triggers>
+                                </Style>
+                            </TextBlock.Style>
+                        </TextBlock>
+                    </Grid>
+                </StackPanel>
+
+                <!-- Add Question Button -->
+                <Button Content="Add Question" Click="AddQuestion_Click" Width="100" HorizontalAlignment="Left" Margin="0,10,0,0"/>
+            </StackPanel>
+        </Grid>
+    </ScrollViewer>
+</Page>

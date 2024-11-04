@@ -1,0 +1,26 @@
+﻿<Window x:Class="QUIZ_PROJECT.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Quiz Project" Height="550" Width="800" Background="#F7FAFC" WindowStartupLocation="CenterScreen">
+
+    <DockPanel>
+        <!-- Sidebar Menu -->
+        <StackPanel DockPanel.Dock="Left" Width="180" Background="#2D3748" VerticalAlignment="Stretch">
+            <TextBlock Text="Quiz Project" FontSize="20" FontWeight="Bold" Foreground="White" 
+                       HorizontalAlignment="Center" Margin="0,20,0,30"/>
+
+            <!-- Sidebar Buttons with Icons -->
+            <Button Content="🏠  Home" Name="HomeButton" Click="HomeButton_Click" Style="{StaticResource SidebarButtonStyle}"/>
+            <Button Content="👥  Manage Users" Name="UsersButton" Click="UsersButton_Click" Style="{StaticResource SidebarButtonStyle}"/>
+            <Button Content="📂  Manage Categories" Name="CategoriesButton" Click="CategoriesButton_Click" Style="{StaticResource SidebarButtonStyle}"/>
+            <Button Content="📄  Manage Quizzes" Name="QuizzesButton" Click="QuizzesButton_Click" Style="{StaticResource SidebarButtonStyle}"/>
+            <Button Content="📝  Take Quiz" Name="TakeQuizButton" Click="TakeQuizButton_Click" Style="{StaticResource SidebarButtonStyle}"/>
+            <Button Content="📊  View Results" Name="ResultsButton" Click="ResultsButton_Click" Style="{StaticResource SidebarButtonStyle}"/>
+        </StackPanel>
+
+        <!-- Content Area -->
+        <Border Background="White" BorderThickness="1" BorderBrush="#CBD5E0" Margin="10" CornerRadius="10">
+            <Frame Name="MainContent" NavigationUIVisibility="Hidden" />
+        </Border>
+    </DockPanel>
+</Window>

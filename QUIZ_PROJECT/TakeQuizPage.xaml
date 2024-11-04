@@ -1,0 +1,66 @@
+﻿<Page x:Class="QUIZ_PROJECT.TakeQuizPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      Title="Take Quiz" Background="AliceBlue" Height="500" Width="600">
+
+    <Grid Margin="20">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <!-- Quiz Title and Instructions -->
+        <TextBlock Text="Take Quiz" FontSize="26" FontWeight="Bold" Foreground="#2D3748" Margin="0,0,0,10" Grid.Row="0"/>
+        <TextBlock x:Name="QuizTitleText" FontSize="22" FontWeight="SemiBold" Foreground="#4A5568" Margin="0,0,0,5" Grid.Row="1"/>
+        <TextBlock x:Name="QuizInstructions" FontSize="14" Foreground="#718096" Margin="0,0,0,15" TextWrapping="Wrap" Grid.Row="1"/>
+
+        <!-- Select Quiz ComboBox -->
+        <ComboBox x:Name="QuizComboBox" Width="300" Margin="0,0,0,20" SelectionChanged="QuizComboBox_SelectionChanged" Grid.Row="1" VerticalAlignment="Top">
+            <ComboBox.Style>
+                <Style TargetType="ComboBox">
+                    <Setter Property="HorizontalAlignment" Value="Left"/>
+                    <Setter Property="Padding" Value="5"/>
+                    <Setter Property="FontSize" Value="16"/>
+                </Style>
+            </ComboBox.Style>
+        </ComboBox>
+
+        <!-- Scrollable Area for Questions and Answers -->
+        <ScrollViewer Height="250" VerticalScrollBarVisibility="Auto" Grid.Row="2">
+            <ItemsControl x:Name="QuestionsItemsControl">
+                <ItemsControl.ItemTemplate>
+                    <DataTemplate>
+                        <Border BorderBrush="#CBD5E0" BorderThickness="1" CornerRadius="5" Padding="15" Margin="0,10" Background="#EDF2F7">
+                            <StackPanel>
+                                <!-- Display Question Text and Number -->
+                                <TextBlock Text="{Binding Text}" FontWeight="Bold" FontSize="16" Foreground="#2D3748"/>
+                                <ItemsControl ItemsSource="{Binding Answers}">
+                                    <ItemsControl.ItemTemplate>
+                                        <DataTemplate>
+                                            <StackPanel Orientation="Horizontal" Margin="10,5,0,0">
+                                                <TextBlock Text="{Binding Position}" FontWeight="Bold" FontSize="14" Foreground="#4A5568" Margin="0,0,5,0"/>
+                                                <RadioButton Content="{Binding Text}" 
+                                                             GroupName="{Binding DataContext.Id, RelativeSource={RelativeSource AncestorType=ItemsControl}}"
+                                                             Background="#E2E8F0" Padding="5,2"
+                                                             BorderBrush="#CBD5E0" 
+                                                             FontSize="14"
+                                                             Foreground="#2D3748"
+                                                             Checked="RadioButton_Checked"/>
+                                            </StackPanel>
+                                        </DataTemplate>
+                                    </ItemsControl.ItemTemplate>
+                                </ItemsControl>
+                            </StackPanel>
+                        </Border>
+                    </DataTemplate>
+                </ItemsControl.ItemTemplate>
+            </ItemsControl>
+        </ScrollViewer>
+
+        <!-- Submit Button with Confirmation -->
+        <Button Content="Submit Quiz" Click="SubmitQuiz_Click" Margin="0,20,0,0" Width="140" Height="40" HorizontalAlignment="Center" FontSize="16" FontWeight="Bold"
+                Background="#4A5568" Foreground="White" BorderThickness="0" Padding="5" Cursor="Hand" Grid.Row="3"/>
+    </Grid>
+</Page>
