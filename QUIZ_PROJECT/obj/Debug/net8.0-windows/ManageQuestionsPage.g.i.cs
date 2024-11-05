@@ -100,7 +100,7 @@ namespace QUIZ_PROJECT {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/QUIZ_PROJECT;V1.0.0.0;component/managequestionspage.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/QUIZ_PROJECT;component/managequestionspage.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\ManageQuestionsPage.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

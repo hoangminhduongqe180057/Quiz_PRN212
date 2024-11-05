@@ -68,7 +68,7 @@ namespace QUIZ_PROJECT {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/QUIZ_PROJECT;V1.0.0.0;component/categoriespage.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/QUIZ_PROJECT;component/categoriespage.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\CategoriesPage.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

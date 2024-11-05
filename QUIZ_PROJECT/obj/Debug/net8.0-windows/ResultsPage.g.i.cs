@@ -60,7 +60,7 @@ namespace QUIZ_PROJECT {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/QUIZ_PROJECT;V1.0.0.0;component/resultspage.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/QUIZ_PROJECT;component/resultspage.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\ResultsPage.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

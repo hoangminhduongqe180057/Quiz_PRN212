@@ -15,49 +15,50 @@
             <!-- Sections -->
             <WrapPanel HorizontalAlignment="Center" VerticalAlignment="Top" Width="600" Margin="0,20,0,0">
                 <!-- Manage Users Section -->
-                <Border Background="White" BorderBrush="#CBD5E0" BorderThickness="1" CornerRadius="10" Margin="10" Padding="20" Width="250" Height="150">
+                <Border x:Name="ManageUsersSection" Background="White" BorderBrush="#CBD5E0" BorderThickness="1" CornerRadius="10" Margin="10" Padding="20" Width="250" Height="150">
                     <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
                         <TextBlock Text="Manage Users" FontSize="18" FontWeight="SemiBold" Foreground="#2D3748" 
-                                   HorizontalAlignment="Center" Margin="0,0,0,10"/>
+                       HorizontalAlignment="Center" Margin="0,0,0,10"/>
                         <Button Content="Go to Users" Width="100" Click="GoToUsers_Click" 
-                                Background="#5E81AC" Foreground="White" BorderBrush="Transparent" 
-                                HorizontalAlignment="Center"/>
+                    Background="#5E81AC" Foreground="White" BorderBrush="Transparent" 
+                    HorizontalAlignment="Center"/>
                     </StackPanel>
                 </Border>
 
                 <!-- Manage Quizzes Section -->
-                <Border Background="White" BorderBrush="#CBD5E0" BorderThickness="1" CornerRadius="10" Margin="10" Padding="20" Width="250" Height="150">
+                <Border x:Name="ManageQuizzesSection" Background="White" BorderBrush="#CBD5E0" BorderThickness="1" CornerRadius="10" Margin="10" Padding="20" Width="250" Height="150">
                     <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
                         <TextBlock Text="Manage Quizzes" FontSize="18" FontWeight="SemiBold" Foreground="#2D3748" 
-                                   HorizontalAlignment="Center" Margin="0,0,0,10"/>
+                       HorizontalAlignment="Center" Margin="0,0,0,10"/>
                         <Button Content="Go to Quizzes" Width="100" Click="GoToQuizzes_Click" 
-                                Background="#5E81AC" Foreground="White" BorderBrush="Transparent" 
-                                HorizontalAlignment="Center"/>
+                    Background="#5E81AC" Foreground="White" BorderBrush="Transparent" 
+                    HorizontalAlignment="Center"/>
                     </StackPanel>
                 </Border>
 
                 <!-- Take Quiz Section -->
-                <Border Background="White" BorderBrush="#CBD5E0" BorderThickness="1" CornerRadius="10" Margin="10" Padding="20" Width="250" Height="150">
+                <Border x:Name="TakeQuizSection" Background="White" BorderBrush="#CBD5E0" BorderThickness="1" CornerRadius="10" Margin="10" Padding="20" Width="250" Height="150">
                     <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
                         <TextBlock Text="Take Quiz" FontSize="18" FontWeight="SemiBold" Foreground="#2D3748" 
-                                   HorizontalAlignment="Center" Margin="0,0,0,10"/>
+                       HorizontalAlignment="Center" Margin="0,0,0,10"/>
                         <Button Content="Start Quiz" Width="100" Click="StartQuiz_Click" 
-                                Background="#5E81AC" Foreground="White" BorderBrush="Transparent" 
-                                HorizontalAlignment="Center"/>
+                    Background="#5E81AC" Foreground="White" BorderBrush="Transparent" 
+                    HorizontalAlignment="Center"/>
                     </StackPanel>
                 </Border>
 
                 <!-- View Results Section -->
-                <Border Background="White" BorderBrush="#CBD5E0" BorderThickness="1" CornerRadius="10" Margin="10" Padding="20" Width="250" Height="150">
+                <Border x:Name="ViewResultsSection" Background="White" BorderBrush="#CBD5E0" BorderThickness="1" CornerRadius="10" Margin="10" Padding="20" Width="250" Height="150">
                     <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
                         <TextBlock Text="View Results" FontSize="18" FontWeight="SemiBold" Foreground="#2D3748" 
-                                   HorizontalAlignment="Center" Margin="0,0,0,10"/>
+                       HorizontalAlignment="Center" Margin="0,0,0,10"/>
                         <Button Content="Go to Results" Width="100" Click="GoToResults_Click" 
-                                Background="#5E81AC" Foreground="White" BorderBrush="Transparent" 
-                                HorizontalAlignment="Center"/>
+                    Background="#5E81AC" Foreground="White" BorderBrush="Transparent" 
+                    HorizontalAlignment="Center"/>
                     </StackPanel>
                 </Border>
             </WrapPanel>
+
         </StackPanel>
     </Grid>
 </Page>

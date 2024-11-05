@@ -8,14 +8,14 @@
         <StackPanel DockPanel.Dock="Left" Width="180" Background="#2D3748" VerticalAlignment="Stretch">
             <TextBlock Text="Quiz Project" FontSize="20" FontWeight="Bold" Foreground="White" 
                        HorizontalAlignment="Center" Margin="0,20,0,30"/>
+            <Button Content="🏠  Home" x:Name="HomeButton" Click="HomeButton_Click" Style="{StaticResource SidebarButtonStyle}"/>
+            <Button Content="👥  Manage Users" x:Name="UsersButton" Click="UsersButton_Click" Style="{StaticResource SidebarButtonStyle}"/>
+            <Button Content="📂  Manage Categories" x:Name="CategoriesButton" Click="CategoriesButton_Click" Style="{StaticResource SidebarButtonStyle}"/>
+            <Button Content="📄  Manage Quizzes" x:Name="QuizzesButton" Click="QuizzesButton_Click" Style="{StaticResource SidebarButtonStyle}"/>
+            <Button Content="📝  Take Quiz" x:Name="TakeQuizButton" Click="TakeQuizButton_Click" Style="{StaticResource SidebarButtonStyle}"/>
+            <Button Content="📊  View Results" x:Name="ResultsButton" Click="ResultsButton_Click" Style="{StaticResource SidebarButtonStyle}"/>
+            <Button Content="🚪 Logout" x:Name="LogoutButton" Click="LogoutButton_Click" Style="{StaticResource SidebarButtonStyle}" Margin="0,20,0,0"/>
 
-            <!-- Sidebar Buttons with Icons -->
-            <Button Content="🏠  Home" Name="HomeButton" Click="HomeButton_Click" Style="{StaticResource SidebarButtonStyle}"/>
-            <Button Content="👥  Manage Users" Name="UsersButton" Click="UsersButton_Click" Style="{StaticResource SidebarButtonStyle}"/>
-            <Button Content="📂  Manage Categories" Name="CategoriesButton" Click="CategoriesButton_Click" Style="{StaticResource SidebarButtonStyle}"/>
-            <Button Content="📄  Manage Quizzes" Name="QuizzesButton" Click="QuizzesButton_Click" Style="{StaticResource SidebarButtonStyle}"/>
-            <Button Content="📝  Take Quiz" Name="TakeQuizButton" Click="TakeQuizButton_Click" Style="{StaticResource SidebarButtonStyle}"/>
-            <Button Content="📊  View Results" Name="ResultsButton" Click="ResultsButton_Click" Style="{StaticResource SidebarButtonStyle}"/>
         </StackPanel>
 
         <!-- Content Area -->

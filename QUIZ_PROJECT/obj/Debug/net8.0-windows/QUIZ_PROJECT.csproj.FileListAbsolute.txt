@@ -158,3 +158,4 @@ D:\CHUYÊN NGÀNH 5\PRN212 - Programming With .NET\QUIZ_PROJECT\QUIZ_PROJECT\obj
 D:\CHUYÊN NGÀNH 5\PRN212 - Programming With .NET\QUIZ_PROJECT\QUIZ_PROJECT\obj\Debug\net8.0-windows\App.baml
 D:\CHUYÊN NGÀNH 5\PRN212 - Programming With .NET\QUIZ_PROJECT\QUIZ_PROJECT\obj\Debug\net8.0-windows\HomePage.baml
 D:\CHUYÊN NGÀNH 5\PRN212 - Programming With .NET\QUIZ_PROJECT\QUIZ_PROJECT\obj\Debug\net8.0-windows\HomePage.g.cs
+D:\CHUYÊN NGÀNH 5\PRN212 - Programming With .NET\QUIZ_PROJECT\QUIZ_PROJECT\obj\Debug\net8.0-windows\QUIZ_PROJECT.sourcelink.json
