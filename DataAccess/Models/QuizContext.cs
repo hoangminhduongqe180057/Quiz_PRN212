@@ -17,6 +17,8 @@ public partial class QuizContext : DbContext
 
     public virtual DbSet<Answer> Answers { get; set; }
 
+    public virtual DbSet<AnswerOption> AnswerOptions { get; set; }
+
     public virtual DbSet<Category> Categories { get; set; }
 
     public virtual DbSet<Mark> Marks { get; set; }
@@ -30,6 +32,7 @@ public partial class QuizContext : DbContext
     public virtual DbSet<User> Users { get; set; }
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+#warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see https://go.microsoft.com/fwlink/?LinkId=723263.
         => optionsBuilder.UseSqlServer("Data Source=DESKTOP-1LGLBF8;Database=Quiz;TrustServerCertificate=true;Trusted_Connection=SSPI;Encrypt=false;");
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
@@ -48,6 +51,16 @@ public partial class QuizContext : DbContext
                 .HasConstraintName("FK__Answer__Question__440B1D61");
         });
 
+        modelBuilder.Entity<AnswerOption>(entity =>
+        {
+            entity.HasKey(e => e.AnswerId).HasName("PK__AnswerOp__D4825004E9D944EB");
+
+            entity.ToTable("AnswerOption");
+
+            entity.Property(e => e.Label).HasMaxLength(10);
+            entity.Property(e => e.Text).HasMaxLength(200);
+        });
+
         modelBuilder.Entity<Category>(entity =>
         {
             entity.HasKey(e => e.Id).HasName("PK__Category__3214EC079D3A7131");
@@ -64,6 +77,7 @@ public partial class QuizContext : DbContext
             entity.ToTable("Mark");
 
             entity.Property(e => e.DateTaken).HasColumnType("datetime");
+            entity.Property(e => e.Score).HasColumnType("decimal(5, 2)");
 
             entity.HasOne(d => d.Quiz).WithMany(p => p.Marks)
                 .HasForeignKey(d => d.QuizId)
@@ -125,6 +139,7 @@ public partial class QuizContext : DbContext
 
             entity.ToTable("User");
 
+            entity.Property(e => e.Name).HasMaxLength(100);
             entity.Property(e => e.Password).HasMaxLength(255);
             entity.Property(e => e.Role).HasMaxLength(50);
             entity.Property(e => e.Username).HasMaxLength(100);

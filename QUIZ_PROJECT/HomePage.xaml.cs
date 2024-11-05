@@ -6,10 +6,28 @@ namespace QUIZ_PROJECT
     public partial class HomePage : Page
     {
         private string UserRole;
-        public HomePage(string userRole)
+        private string UserName;
+        private int UserId; 
+
+        public HomePage(string userRole, string userName, int userId)
         {
             InitializeComponent();
             UserRole = userRole;
+            UserName = userName;
+            UserId = userId; // Store userId
+
+            // Set the role icon based on userRole
+            string roleIcon = userRole switch
+            {
+                "Admin" => "👑",
+                "Teacher" => "📚",
+                "Student" => "🎓",
+                _ => "👤"
+            };
+
+            // Display role and name information
+            RoleText.Text = $"{roleIcon} {userRole}";
+
             SetSectionVisibility();
         }
 
@@ -53,12 +71,14 @@ namespace QUIZ_PROJECT
 
         private void StartQuiz_Click(object sender, RoutedEventArgs e)
         {
-            NavigationService.Navigate(new TakeQuizPage());
+            // Pass UserId to TakeQuizPage
+            NavigationService.Navigate(new TakeQuizPage(UserId));
         }
 
         private void GoToResults_Click(object sender, RoutedEventArgs e)
         {
-            NavigationService.Navigate(new ResultsPage());
+            // Pass UserName to ResultsPage
+            NavigationService.Navigate(new ResultsPage(UserName));
         }
     }
 }

@@ -13,5 +13,7 @@ public partial class User
 
     public string Role { get; set; } = null!;
 
+    public string? Name { get; set; }
+
     public virtual ICollection<Student> Students { get; set; } = new List<Student>();
 }

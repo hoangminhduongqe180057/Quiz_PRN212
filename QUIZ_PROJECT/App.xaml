@@ -7,11 +7,9 @@
         <!-- Sidebar Button Style -->
         <Style x:Key="SidebarButtonStyle" TargetType="Button">
             <Setter Property="Foreground" Value="#E5E5E5"/>
-            <!-- Softer light gray for text -->
             <Setter Property="FontSize" Value="14"/>
             <Setter Property="FontWeight" Value="Bold"/>
             <Setter Property="Background" Value="#3B4252"/>
-            <!-- Softer dark gray for sidebar background -->
             <Setter Property="BorderBrush" Value="Transparent"/>
             <Setter Property="Margin" Value="0,5,0,5"/>
             <Setter Property="Padding" Value="10,5"/>
@@ -24,8 +22,8 @@
                         </Border>
                         <ControlTemplate.Triggers>
                             <Trigger Property="IsMouseOver" Value="True">
-                                <Setter Property="Background" Value="#4C566A"/>
-                                <!-- Slightly lighter gray on hover -->
+                                <Setter Property="Background" Value="#6A91C9"/>
+                                <!-- Lighter color on hover -->
                             </Trigger>
                         </ControlTemplate.Triggers>
                     </ControlTemplate>
@@ -34,7 +32,7 @@
         </Style>
 
         <!-- Other Global Styles or Resources -->
-        <!-- TextBox and PasswordBox with Rounded Corners -->
+        <!-- Rounded TextBox Style -->
         <Style x:Key="RoundedTextBoxStyle" TargetType="TextBox">
             <Setter Property="Control.Template">
                 <Setter.Value>
@@ -50,6 +48,7 @@
             </Setter>
         </Style>
 
+        <!-- Rounded PasswordBox Style -->
         <Style x:Key="RoundedPasswordBoxStyle" TargetType="PasswordBox">
             <Setter Property="Control.Template">
                 <Setter.Value>
@@ -65,29 +64,37 @@
             </Setter>
         </Style>
 
-        <!-- Button Style with Rounded Corners -->
+        <!-- Rounded Button Style with Lighter Hover Effect -->
         <Style x:Key="RoundedButtonStyle" TargetType="Button">
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="FontSize" Value="14"/>
+            <Setter Property="FontWeight" Value="SemiBold"/>
+            <Setter Property="Background" Value="#5E81AC"/>
+            <Setter Property="Padding" Value="10,5"/>
+            <Setter Property="HorizontalAlignment" Value="Center"/>
+            <Setter Property="BorderBrush" Value="Transparent"/>
+            <Setter Property="Cursor" Value="Hand"/>
             <Setter Property="Template">
                 <Setter.Value>
                     <ControlTemplate TargetType="Button">
-                        <Border Background="{TemplateBinding Background}" 
-                                BorderBrush="{TemplateBinding BorderBrush}" 
-                                CornerRadius="20" 
-                                Padding="{TemplateBinding Padding}">
+                        <Border Background="{TemplateBinding Background}" CornerRadius="20" Padding="{TemplateBinding Padding}">
                             <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
                         </Border>
                     </ControlTemplate>
                 </Setter.Value>
             </Setter>
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Background" Value="#A0C4FF"/>
+                    <!-- Light blue hover color -->
+                </Trigger>
+            </Style.Triggers>
         </Style>
 
         <!-- Colors for Consistent Theme -->
         <Color x:Key="PrimaryColor">#3B4252</Color>
-        <!-- Softer dark gray for sidebar background -->
         <Color x:Key="SecondaryColor">#4A5568</Color>
-        <!-- General secondary color -->
         <Color x:Key="AccentColor">#5E81AC</Color>
-        <!-- Accent color for buttons -->
         <SolidColorBrush x:Key="PrimaryBrush" Color="{StaticResource PrimaryColor}"/>
         <SolidColorBrush x:Key="SecondaryBrush" Color="{StaticResource SecondaryColor}"/>
         <SolidColorBrush x:Key="AccentBrush" Color="{StaticResource AccentColor}"/>

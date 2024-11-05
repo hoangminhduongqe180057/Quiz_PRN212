@@ -10,6 +10,8 @@ namespace QUIZ_PROJECT
     public partial class QuizzesPage : Page
     {
         private QuizContext _context;
+        private bool _isEditMode = false;
+        private int? _editingQuizId = null;
 
         public QuizzesPage()
         {
@@ -23,6 +25,7 @@ namespace QUIZ_PROJECT
         private void LoadQuizzes()
         {
             QuizzesDataGrid.ItemsSource = _context.Quizzes.Include(q => q.Category).ToList();
+            ClearInputFields(); // Clear input fields after loading data
         }
 
         // Load all categories into the ComboBox for selection when adding a new quiz
@@ -33,29 +36,39 @@ namespace QUIZ_PROJECT
             CategoryComboBox.SelectedValuePath = "Id";
         }
 
-        // Add a new quiz to the database
+        // Add or edit a quiz
         private void AddQuiz_Click(object sender, RoutedEventArgs e)
         {
-            if (!string.IsNullOrWhiteSpace(QuizTitleTextBox.Text) && CategoryComboBox.SelectedValue != null)
+            if (string.IsNullOrWhiteSpace(QuizTitleTextBox.Text) || CategoryComboBox.SelectedValue == null)
             {
-                var quiz = new Quiz
+                MessageBox.Show("Please enter a title and select a category.", "Input Error", MessageBoxButton.OK, MessageBoxImage.Warning);
+                return;
+            }
+
+            if (_isEditMode && _editingQuizId.HasValue) // Edit mode
+            {
+                var quiz = _context.Quizzes.FirstOrDefault(q => q.Id == _editingQuizId.Value);
+                if (quiz != null)
+                {
+                    quiz.Title = QuizTitleTextBox.Text;
+                    quiz.CategoryId = (int)CategoryComboBox.SelectedValue;
+                    MessageBox.Show("Quiz updated successfully!", "Success", MessageBoxButton.OK, MessageBoxImage.Information);
+                }
+            }
+            else // Add mode
+            {
+                var newQuiz = new Quiz
                 {
                     Title = QuizTitleTextBox.Text,
                     CategoryId = (int)CategoryComboBox.SelectedValue
                 };
-
-                _context.Quizzes.Add(quiz);
-                _context.SaveChanges();
-                LoadQuizzes();
-
-                // Clear input fields after adding
-                QuizTitleTextBox.Clear();
-                CategoryComboBox.SelectedIndex = -1;
+                _context.Quizzes.Add(newQuiz);
+                MessageBox.Show("Quiz added successfully!", "Success", MessageBoxButton.OK, MessageBoxImage.Information);
             }
-            else
-            {
-                MessageBox.Show("Please enter a title and select a category.");
-            }
+
+            _context.SaveChanges();
+            LoadQuizzes();
+            ResetForm();
         }
 
         // Edit the selected quiz's title and category
@@ -63,23 +76,15 @@ namespace QUIZ_PROJECT
         {
             if (QuizzesDataGrid.SelectedItem is Quiz selectedQuiz)
             {
-                var newTitle = Microsoft.VisualBasic.Interaction.InputBox("Edit Quiz Title:", "Edit Quiz", selectedQuiz.Title);
-                if (!string.IsNullOrEmpty(newTitle) && CategoryComboBox.SelectedValue != null)
-                {
-                    selectedQuiz.Title = newTitle;
-                    selectedQuiz.CategoryId = (int)CategoryComboBox.SelectedValue;
-
-                    _context.SaveChanges();
-                    LoadQuizzes();
-                }
-                else
-                {
-                    MessageBox.Show("Please provide a new title and select a category.");
-                }
+                _isEditMode = true;
+                _editingQuizId = selectedQuiz.Id;
+                QuizTitleTextBox.Text = selectedQuiz.Title;
+                CategoryComboBox.SelectedValue = selectedQuiz.CategoryId;
+                AddQuiz_Button.Content = "Update Quiz";
             }
             else
             {
-                MessageBox.Show("Please select a quiz to edit.");
+                MessageBox.Show("Please select a quiz to edit.", "Edit Quiz", MessageBoxButton.OK, MessageBoxImage.Information);
             }
         }
 
@@ -94,11 +99,12 @@ namespace QUIZ_PROJECT
                     _context.Quizzes.Remove(selectedQuiz);
                     _context.SaveChanges();
                     LoadQuizzes();
+                    MessageBox.Show("Quiz deleted successfully.", "Deleted", MessageBoxButton.OK, MessageBoxImage.Information);
                 }
             }
             else
             {
-                MessageBox.Show("Please select a quiz to delete.");
+                MessageBox.Show("Please select a quiz to delete.", "Delete Quiz", MessageBoxButton.OK, MessageBoxImage.Information);
             }
         }
 
@@ -112,18 +118,38 @@ namespace QUIZ_PROJECT
             }
             else
             {
-                MessageBox.Show("Please select a quiz to manage its questions.");
+                MessageBox.Show("Please select a quiz to manage its questions.", "Manage Questions", MessageBoxButton.OK, MessageBoxImage.Information);
             }
         }
 
-        // Update the category ComboBox when a quiz is selected, for easier editing
+        // Update the form fields when a quiz is selected in the DataGrid
         private void QuizzesDataGrid_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             if (QuizzesDataGrid.SelectedItem is Quiz selectedQuiz)
             {
-                CategoryComboBox.SelectedValue = selectedQuiz.CategoryId;
+                _isEditMode = true;
+                _editingQuizId = selectedQuiz.Id;
                 QuizTitleTextBox.Text = selectedQuiz.Title;
+                CategoryComboBox.SelectedValue = selectedQuiz.CategoryId;
+                AddQuiz_Button.Content = "Update Quiz";
             }
+        }
+
+        // Reset the form fields and set the button back to "Add"
+        private void ResetForm()
+        {
+            QuizTitleTextBox.Clear();
+            CategoryComboBox.SelectedIndex = -1;
+            _isEditMode = false;
+            _editingQuizId = null;
+            AddQuiz_Button.Content = "Add Quiz";
+        }
+
+        // Clears the input fields
+        private void ClearInputFields()
+        {
+            QuizTitleTextBox.Clear();
+            CategoryComboBox.SelectedIndex = -1;
         }
     }
 }

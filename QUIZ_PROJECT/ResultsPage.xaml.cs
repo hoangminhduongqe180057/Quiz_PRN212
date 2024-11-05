@@ -23,10 +23,12 @@ namespace QUIZ_PROJECT
     public partial class ResultsPage : Page
     {
         private QuizContext _context;
+        private string _userName;
 
-        public ResultsPage()
+        public ResultsPage(string userName)
         {
             InitializeComponent();
+            _userName = userName;
             _context = new QuizContext();
             LoadResults();
         }

@@ -1,41 +1,127 @@
 ﻿<Page x:Class="QUIZ_PROJECT.UsersPage"
       xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-      Title="UsersPage" Background="AliceBlue">
+      Title="UsersPage" Background="#F7FAFC">
 
-    <Grid Margin="10">
-        <StackPanel>
-            <TextBlock Text="Manage Users" FontSize="20" FontWeight="Bold" Margin="0,0,0,10"/>
+    <Page.Resources>
+        <!-- Centered Cell Style for DataGrid cells -->
+        <Style x:Key="CenteredCellStyle" TargetType="TextBlock">
+            <Setter Property="HorizontalAlignment" Value="Center"/>
+            <Setter Property="VerticalAlignment" Value="Center"/>
+        </Style>
 
-            <!-- Table of Users -->
-            <DataGrid x:Name="UsersDataGrid" AutoGenerateColumns="False" Height="200" Margin="0,0,0,10">
-                <DataGrid.Columns>
-                    <DataGridTextColumn Header="Username" Binding="{Binding Username}" Width="100"/>
-                    <DataGridTextColumn Header="Role" Binding="{Binding Role}" Width="100"/>
-                    <DataGridTemplateColumn Header="Actions" Width="100">
-                        <DataGridTemplateColumn.CellTemplate>
-                            <DataTemplate>
-                                <StackPanel Orientation="Horizontal">
-                                    <Button Content="Edit" Margin="0,0,5,0" Click="EditUser_Click"/>
-                                    <Button Content="Delete" Click="DeleteUser_Click"/>
-                                </StackPanel>
-                            </DataTemplate>
-                        </DataGridTemplateColumn.CellTemplate>
-                    </DataGridTemplateColumn>
-                </DataGrid.Columns>
-            </DataGrid>
+        <!-- Rounded Button Style for Action Buttons -->
+        <Style x:Key="RoundedButtonStyle" TargetType="Button">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border Background="{TemplateBinding Background}"
+                                BorderBrush="{TemplateBinding BorderBrush}"
+                                CornerRadius="10"
+                                Padding="{TemplateBinding Padding}">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Background" Value="#4C566A"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Page.Resources>
 
-            <!-- Add New User -->
-            <StackPanel Orientation="Horizontal" Margin="0,10,0,0">
-                <TextBox x:Name="UsernameTextBox" Width="150"  Margin="0,0,5,0"/>
-                <TextBox x:Name="PasswordTextBox" Width="150" Margin="0,0,5,0"/>
-                <ComboBox x:Name="RoleComboBox" Width="100">
-                    <ComboBoxItem Content="Admin"/>
-                    <ComboBoxItem Content="Teacher"/>
-                    <ComboBoxItem Content="Student"/>
-                </ComboBox>
-                <Button Content="Add User" Click="AddUser_Click" Margin="5,0,0,0"/>
-            </StackPanel>
+    <Grid Margin="20">
+        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Top" Width="600">
+
+            <!-- Manage Users Title -->
+            <TextBlock Text="Manage Users" FontSize="24" FontWeight="Bold" Foreground="#2D3748"
+                       HorizontalAlignment="Center" Margin="0,0,0,20"/>
+
+            <!-- DataGrid with Fixed Height and ScrollViewer -->
+            <Border Background="White" BorderBrush="#CBD5E0" BorderThickness="1" CornerRadius="10" Padding="10" Margin="0,0,0,20">
+                <ScrollViewer VerticalScrollBarVisibility="Auto">
+                    <DataGrid x:Name="UsersDataGrid" AutoGenerateColumns="False" HeadersVisibility="Column"
+                              GridLinesVisibility="None" CanUserAddRows="False" Background="White"
+                              AlternatingRowBackground="#F3F4F6" BorderBrush="Transparent" Margin="5" 
+                              FontSize="16" ColumnHeaderHeight="40" RowHeight="35" Height="200">
+                        <DataGrid.ColumnHeaderStyle>
+                            <Style TargetType="DataGridColumnHeader">
+                                <Setter Property="HorizontalContentAlignment" Value="Center"/>
+                                <Setter Property="FontWeight" Value="Bold"/>
+                                <Setter Property="FontSize" Value="18"/>
+                                <Setter Property="Foreground" Value="#2D3748"/>
+                            </Style>
+                        </DataGrid.ColumnHeaderStyle>
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Header="Username" Binding="{Binding Username}" Width="2*" 
+                                                ElementStyle="{StaticResource CenteredCellStyle}" />
+                            <DataGridTextColumn Header="Role" Binding="{Binding Role}" Width="2*" 
+                                                ElementStyle="{StaticResource CenteredCellStyle}" />
+                            <DataGridTemplateColumn Header="Actions" Width="1.5*">
+                                <DataGridTemplateColumn.CellTemplate>
+                                    <DataTemplate>
+                                        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                                            <Button Content="Edit" Width="50" Margin="2,0" Click="EditUser_Click"
+                                                    Style="{StaticResource RoundedButtonStyle}" />
+                                            <Button Content="Delete" Width="60" Margin="2,0" Click="DeleteUser_Click"
+                                                    Style="{StaticResource RoundedButtonStyle}" />
+                                        </StackPanel>
+                                    </DataTemplate>
+                                </DataGridTemplateColumn.CellTemplate>
+                            </DataGridTemplateColumn>
+                        </DataGrid.Columns>
+                    </DataGrid>
+                </ScrollViewer>
+            </Border>
+
+            <!-- User Information Form for Adding or Editing -->
+            <!-- User Information Form for Adding or Editing -->
+            <Border Background="#E6F0FA" BorderBrush="#5E81AC" BorderThickness="1" CornerRadius="10" Padding="20">
+                <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" Width="500">
+                    <TextBlock Text="User Information" FontSize="20" FontWeight="Bold" Foreground="#5E81AC"
+                   HorizontalAlignment="Center" Margin="0,0,0,20"/>
+
+                    <!-- Name Field -->
+                    <StackPanel Margin="0,5">
+                        <TextBlock Text="Name" FontSize="16" FontWeight="Bold" Foreground="#4A5568" Margin="0,0,0,5"/>
+                        <TextBox x:Name="NameTextBox" Width="400" Height="30" FontSize="14" Padding="5"
+                    BorderBrush="#CBD5E0" BorderThickness="1" />
+                    </StackPanel>
+
+
+                    <!-- Username Field -->
+                    <StackPanel Margin="0,5">
+                        <TextBlock Text="Username" FontSize="16" FontWeight="Bold" Foreground="#4A5568" Margin="0,0,0,5"/>
+                        <TextBox x:Name="UsernameTextBox" Width="400" Height="30" FontSize="14" Padding="5"
+                     BorderBrush="#CBD5E0" BorderThickness="1" />
+                    </StackPanel>
+
+                    <!-- Password Field -->
+                    <StackPanel Margin="0,5">
+                        <TextBlock Text="Password" FontSize="16" FontWeight="Bold" Foreground="#4A5568" Margin="0,0,0,5"/>
+                        <PasswordBox x:Name="PasswordTextBox" Width="400" Height="30" FontSize="14" Padding="5"
+                         BorderBrush="#CBD5E0" BorderThickness="1" />
+                    </StackPanel>
+
+                    <!-- Role Field -->
+                    <StackPanel Margin="0,5">
+                        <TextBlock Text="Role" FontSize="16" FontWeight="Bold" Foreground="#4A5568" Margin="0,0,0,5"/>
+                        <ComboBox x:Name="RoleComboBox" Width="400" Height="30" FontSize="14" BorderBrush="#CBD5E0" BorderThickness="1">
+                            <ComboBoxItem Content="Admin" />
+                            <ComboBoxItem Content="Teacher" />
+                            <ComboBoxItem Content="Student" />
+                        </ComboBox>
+                    </StackPanel>
+
+                    <!-- Save Button -->
+                    <Button Content="Save" Click="AddUser_Click" Width="200" Height="40"
+                Background="#5E81AC" Foreground="White" BorderBrush="Transparent"
+                FontWeight="Bold" FontSize="16" Margin="0,20,0,0" Style="{StaticResource RoundedButtonStyle}" />
+                </StackPanel>
+            </Border>
+
         </StackPanel>
     </Grid>
 </Page>

@@ -3,6 +3,30 @@
   "WorkspaceRootPath": "D:\\CHUY\u00CAN NG\u00C0NH 5\\PRN212 - Programming With .NET\\QUIZ_PROJECT\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{DE4D3398-6290-4F75-B631-E137E5F90227}|QUIZ_PROJECT\\QUIZ_PROJECT.csproj|d:\\chuy\u00EAn ng\u00E0nh 5\\prn212 - programming with .net\\quiz_project\\quiz_project\\takequizpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DE4D3398-6290-4F75-B631-E137E5F90227}|QUIZ_PROJECT\\QUIZ_PROJECT.csproj|solutionrelative:quiz_project\\takequizpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DE4D3398-6290-4F75-B631-E137E5F90227}|QUIZ_PROJECT\\QUIZ_PROJECT.csproj|d:\\chuy\u00EAn ng\u00E0nh 5\\prn212 - programming with .net\\quiz_project\\quiz_project\\userspage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DE4D3398-6290-4F75-B631-E137E5F90227}|QUIZ_PROJECT\\QUIZ_PROJECT.csproj|solutionrelative:quiz_project\\userspage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A3255FE1-F535-4A97-A660-EB2592022D12}|DataAccess\\DataAccess.csproj|d:\\chuy\u00EAn ng\u00E0nh 5\\prn212 - programming with .net\\quiz_project\\dataaccess\\models\\question.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A3255FE1-F535-4A97-A660-EB2592022D12}|DataAccess\\DataAccess.csproj|solutionrelative:dataaccess\\models\\question.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A3255FE1-F535-4A97-A660-EB2592022D12}|DataAccess\\DataAccess.csproj|d:\\chuy\u00EAn ng\u00E0nh 5\\prn212 - programming with .net\\quiz_project\\dataaccess\\models\\mark.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A3255FE1-F535-4A97-A660-EB2592022D12}|DataAccess\\DataAccess.csproj|solutionrelative:dataaccess\\models\\mark.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DE4D3398-6290-4F75-B631-E137E5F90227}|QUIZ_PROJECT\\QUIZ_PROJECT.csproj|d:\\chuy\u00EAn ng\u00E0nh 5\\prn212 - programming with .net\\quiz_project\\quiz_project\\homepage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DE4D3398-6290-4F75-B631-E137E5F90227}|QUIZ_PROJECT\\QUIZ_PROJECT.csproj|solutionrelative:quiz_project\\homepage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DE4D3398-6290-4F75-B631-E137E5F90227}|QUIZ_PROJECT\\QUIZ_PROJECT.csproj|d:\\chuy\u00EAn ng\u00E0nh 5\\prn212 - programming with .net\\quiz_project\\quiz_project\\resultspage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DE4D3398-6290-4F75-B631-E137E5F90227}|QUIZ_PROJECT\\QUIZ_PROJECT.csproj|solutionrelative:quiz_project\\resultspage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{DE4D3398-6290-4F75-B631-E137E5F90227}|QUIZ_PROJECT\\QUIZ_PROJECT.csproj|d:\\chuy\u00EAn ng\u00E0nh 5\\prn212 - programming with .net\\quiz_project\\quiz_project\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{DE4D3398-6290-4F75-B631-E137E5F90227}|QUIZ_PROJECT\\QUIZ_PROJECT.csproj|solutionrelative:quiz_project\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -11,84 +35,36 @@
       "RelativeMoniker": "D:0:0:{DE4D3398-6290-4F75-B631-E137E5F90227}|QUIZ_PROJECT\\QUIZ_PROJECT.csproj|solutionrelative:quiz_project\\loginwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DE4D3398-6290-4F75-B631-E137E5F90227}|QUIZ_PROJECT\\QUIZ_PROJECT.csproj|d:\\chuy\u00EAn ng\u00E0nh 5\\prn212 - programming with .net\\quiz_project\\quiz_project\\homepage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DE4D3398-6290-4F75-B631-E137E5F90227}|QUIZ_PROJECT\\QUIZ_PROJECT.csproj|solutionrelative:quiz_project\\homepage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DE4D3398-6290-4F75-B631-E137E5F90227}|QUIZ_PROJECT\\QUIZ_PROJECT.csproj|d:\\chuy\u00EAn ng\u00E0nh 5\\prn212 - programming with .net\\quiz_project\\quiz_project\\homepage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{DE4D3398-6290-4F75-B631-E137E5F90227}|QUIZ_PROJECT\\QUIZ_PROJECT.csproj|solutionrelative:quiz_project\\homepage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DE4D3398-6290-4F75-B631-E137E5F90227}|QUIZ_PROJECT\\QUIZ_PROJECT.csproj|d:\\chuy\u00EAn ng\u00E0nh 5\\prn212 - programming with .net\\quiz_project\\quiz_project\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{DE4D3398-6290-4F75-B631-E137E5F90227}|QUIZ_PROJECT\\QUIZ_PROJECT.csproj|solutionrelative:quiz_project\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A3255FE1-F535-4A97-A660-EB2592022D12}|DataAccess\\DataAccess.csproj|d:\\chuy\u00EAn ng\u00E0nh 5\\prn212 - programming with .net\\quiz_project\\dataaccess\\models\\quizcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A3255FE1-F535-4A97-A660-EB2592022D12}|DataAccess\\DataAccess.csproj|solutionrelative:dataaccess\\models\\quizcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DE4D3398-6290-4F75-B631-E137E5F90227}|QUIZ_PROJECT\\QUIZ_PROJECT.csproj|d:\\chuy\u00EAn ng\u00E0nh 5\\prn212 - programming with .net\\quiz_project\\quiz_project\\userspage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DE4D3398-6290-4F75-B631-E137E5F90227}|QUIZ_PROJECT\\QUIZ_PROJECT.csproj|solutionrelative:quiz_project\\userspage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{DE4D3398-6290-4F75-B631-E137E5F90227}|QUIZ_PROJECT\\QUIZ_PROJECT.csproj|d:\\chuy\u00EAn ng\u00E0nh 5\\prn212 - programming with .net\\quiz_project\\quiz_project\\userspage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{DE4D3398-6290-4F75-B631-E137E5F90227}|QUIZ_PROJECT\\QUIZ_PROJECT.csproj|solutionrelative:quiz_project\\userspage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DE4D3398-6290-4F75-B631-E137E5F90227}|QUIZ_PROJECT\\QUIZ_PROJECT.csproj|d:\\chuy\u00EAn ng\u00E0nh 5\\prn212 - programming with .net\\quiz_project\\quiz_project\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{DE4D3398-6290-4F75-B631-E137E5F90227}|QUIZ_PROJECT\\QUIZ_PROJECT.csproj|solutionrelative:quiz_project\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DE4D3398-6290-4F75-B631-E137E5F90227}|QUIZ_PROJECT\\QUIZ_PROJECT.csproj|d:\\chuy\u00EAn ng\u00E0nh 5\\prn212 - programming with .net\\quiz_project\\quiz_project\\managequestionspage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{DE4D3398-6290-4F75-B631-E137E5F90227}|QUIZ_PROJECT\\QUIZ_PROJECT.csproj|solutionrelative:quiz_project\\managequestionspage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DE4D3398-6290-4F75-B631-E137E5F90227}|QUIZ_PROJECT\\QUIZ_PROJECT.csproj|d:\\chuy\u00EAn ng\u00E0nh 5\\prn212 - programming with .net\\quiz_project\\quiz_project\\loginwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{DE4D3398-6290-4F75-B631-E137E5F90227}|QUIZ_PROJECT\\QUIZ_PROJECT.csproj|solutionrelative:quiz_project\\loginwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DE4D3398-6290-4F75-B631-E137E5F90227}|QUIZ_PROJECT\\QUIZ_PROJECT.csproj|d:\\chuy\u00EAn ng\u00E0nh 5\\prn212 - programming with .net\\quiz_project\\quiz_project\\takequizpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{DE4D3398-6290-4F75-B631-E137E5F90227}|QUIZ_PROJECT\\QUIZ_PROJECT.csproj|solutionrelative:quiz_project\\takequizpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DE4D3398-6290-4F75-B631-E137E5F90227}|QUIZ_PROJECT\\QUIZ_PROJECT.csproj|d:\\chuy\u00EAn ng\u00E0nh 5\\prn212 - programming with .net\\quiz_project\\quiz_project\\takequizpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DE4D3398-6290-4F75-B631-E137E5F90227}|QUIZ_PROJECT\\QUIZ_PROJECT.csproj|solutionrelative:quiz_project\\takequizpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DE4D3398-6290-4F75-B631-E137E5F90227}|QUIZ_PROJECT\\QUIZ_PROJECT.csproj|d:\\chuy\u00EAn ng\u00E0nh 5\\prn212 - programming with .net\\quiz_project\\quiz_project\\managequestionspage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DE4D3398-6290-4F75-B631-E137E5F90227}|QUIZ_PROJECT\\QUIZ_PROJECT.csproj|solutionrelative:quiz_project\\managequestionspage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DE4D3398-6290-4F75-B631-E137E5F90227}|QUIZ_PROJECT\\QUIZ_PROJECT.csproj|d:\\chuy\u00EAn ng\u00E0nh 5\\prn212 - programming with .net\\quiz_project\\quiz_project\\quizzespage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{DE4D3398-6290-4F75-B631-E137E5F90227}|QUIZ_PROJECT\\QUIZ_PROJECT.csproj|solutionrelative:quiz_project\\quizzespage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DE4D3398-6290-4F75-B631-E137E5F90227}|QUIZ_PROJECT\\QUIZ_PROJECT.csproj|d:\\chuy\u00EAn ng\u00E0nh 5\\prn212 - programming with .net\\quiz_project\\quiz_project\\quizzespage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DE4D3398-6290-4F75-B631-E137E5F90227}|QUIZ_PROJECT\\QUIZ_PROJECT.csproj|solutionrelative:quiz_project\\quizzespage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DE4D3398-6290-4F75-B631-E137E5F90227}|QUIZ_PROJECT\\QUIZ_PROJECT.csproj|d:\\chuy\u00EAn ng\u00E0nh 5\\prn212 - programming with .net\\quiz_project\\quiz_project\\categoriespage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DE4D3398-6290-4F75-B631-E137E5F90227}|QUIZ_PROJECT\\QUIZ_PROJECT.csproj|solutionrelative:quiz_project\\categoriespage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DE4D3398-6290-4F75-B631-E137E5F90227}|QUIZ_PROJECT\\QUIZ_PROJECT.csproj|d:\\chuy\u00EAn ng\u00E0nh 5\\prn212 - programming with .net\\quiz_project\\quiz_project\\categoriespage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{DE4D3398-6290-4F75-B631-E137E5F90227}|QUIZ_PROJECT\\QUIZ_PROJECT.csproj|solutionrelative:quiz_project\\categoriespage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DE4D3398-6290-4F75-B631-E137E5F90227}|QUIZ_PROJECT\\QUIZ_PROJECT.csproj|d:\\chuy\u00EAn ng\u00E0nh 5\\prn212 - programming with .net\\quiz_project\\quiz_project\\resultspage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DE4D3398-6290-4F75-B631-E137E5F90227}|QUIZ_PROJECT\\QUIZ_PROJECT.csproj|solutionrelative:quiz_project\\resultspage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{DE4D3398-6290-4F75-B631-E137E5F90227}|QUIZ_PROJECT\\QUIZ_PROJECT.csproj|d:\\chuy\u00EAn ng\u00E0nh 5\\prn212 - programming with .net\\quiz_project\\quiz_project\\resultspage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{DE4D3398-6290-4F75-B631-E137E5F90227}|QUIZ_PROJECT\\QUIZ_PROJECT.csproj|solutionrelative:quiz_project\\resultspage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A3255FE1-F535-4A97-A660-EB2592022D12}|DataAccess\\DataAccess.csproj|d:\\chuy\u00EAn ng\u00E0nh 5\\prn212 - programming with .net\\quiz_project\\dataaccess\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{A3255FE1-F535-4A97-A660-EB2592022D12}|DataAccess\\DataAccess.csproj|solutionrelative:dataaccess\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+      "AbsoluteMoniker": "D:0:0:{DE4D3398-6290-4F75-B631-E137E5F90227}|QUIZ_PROJECT\\QUIZ_PROJECT.csproj|d:\\chuy\u00EAn ng\u00E0nh 5\\prn212 - programming with .net\\quiz_project\\quiz_project\\quizzespage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{DE4D3398-6290-4F75-B631-E137E5F90227}|QUIZ_PROJECT\\QUIZ_PROJECT.csproj|solutionrelative:quiz_project\\quizzespage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A3255FE1-F535-4A97-A660-EB2592022D12}|DataAccess\\DataAccess.csproj|d:\\chuy\u00EAn ng\u00E0nh 5\\prn212 - programming with .net\\quiz_project\\dataaccess\\dataaccess.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{A3255FE1-F535-4A97-A660-EB2592022D12}|DataAccess\\DataAccess.csproj|solutionrelative:dataaccess\\dataaccess.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+      "AbsoluteMoniker": "D:0:0:{A3255FE1-F535-4A97-A660-EB2592022D12}|DataAccess\\DataAccess.csproj|d:\\chuy\u00EAn ng\u00E0nh 5\\prn212 - programming with .net\\quiz_project\\dataaccess\\models\\student.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A3255FE1-F535-4A97-A660-EB2592022D12}|DataAccess\\DataAccess.csproj|solutionrelative:dataaccess\\models\\student.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DE4D3398-6290-4F75-B631-E137E5F90227}|QUIZ_PROJECT\\QUIZ_PROJECT.csproj|d:\\chuy\u00EAn ng\u00E0nh 5\\prn212 - programming with .net\\quiz_project\\quiz_project\\takequizpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{DE4D3398-6290-4F75-B631-E137E5F90227}|QUIZ_PROJECT\\QUIZ_PROJECT.csproj|solutionrelative:quiz_project\\takequizpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DE4D3398-6290-4F75-B631-E137E5F90227}|QUIZ_PROJECT\\QUIZ_PROJECT.csproj|d:\\chuy\u00EAn ng\u00E0nh 5\\prn212 - programming with .net\\quiz_project\\quiz_project\\managequestionspage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{DE4D3398-6290-4F75-B631-E137E5F90227}|QUIZ_PROJECT\\QUIZ_PROJECT.csproj|solutionrelative:quiz_project\\managequestionspage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A3255FE1-F535-4A97-A660-EB2592022D12}|DataAccess\\DataAccess.csproj|d:\\chuy\u00EAn ng\u00E0nh 5\\prn212 - programming with .net\\quiz_project\\dataaccess\\models\\answer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A3255FE1-F535-4A97-A660-EB2592022D12}|DataAccess\\DataAccess.csproj|solutionrelative:dataaccess\\models\\answer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DE4D3398-6290-4F75-B631-E137E5F90227}|QUIZ_PROJECT\\QUIZ_PROJECT.csproj|d:\\chuy\u00EAn ng\u00E0nh 5\\prn212 - programming with .net\\quiz_project\\quiz_project\\managequestionspage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DE4D3398-6290-4F75-B631-E137E5F90227}|QUIZ_PROJECT\\QUIZ_PROJECT.csproj|solutionrelative:quiz_project\\managequestionspage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -98,8 +74,21 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 8,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Mark.cs",
+              "DocumentMoniker": "D:\\CHUY\u00CAN NG\u00C0NH 5\\PRN212 - Programming With .NET\\QUIZ_PROJECT\\DataAccess\\Models\\Mark.cs",
+              "RelativeDocumentMoniker": "DataAccess\\Models\\Mark.cs",
+              "ToolTip": "D:\\CHUY\u00CAN NG\u00C0NH 5\\PRN212 - Programming With .NET\\QUIZ_PROJECT\\DataAccess\\Models\\Mark.cs",
+              "RelativeToolTip": "DataAccess\\Models\\Mark.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-05T07:46:37.155Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
@@ -114,52 +103,67 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "HomePage.xaml",
-              "DocumentMoniker": "D:\\CHUY\u00CAN NG\u00C0NH 5\\PRN212 - Programming With .NET\\QUIZ_PROJECT\\QUIZ_PROJECT\\HomePage.xaml",
-              "RelativeDocumentMoniker": "QUIZ_PROJECT\\HomePage.xaml",
-              "ToolTip": "D:\\CHUY\u00CAN NG\u00C0NH 5\\PRN212 - Programming With .NET\\QUIZ_PROJECT\\QUIZ_PROJECT\\HomePage.xaml",
-              "RelativeToolTip": "QUIZ_PROJECT\\HomePage.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-11-04T18:56:00.528Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "MainWindow.xaml.cs",
-              "DocumentMoniker": "D:\\CHUY\u00CAN NG\u00C0NH 5\\PRN212 - Programming With .NET\\QUIZ_PROJECT\\QUIZ_PROJECT\\MainWindow.xaml.cs",
-              "RelativeDocumentMoniker": "QUIZ_PROJECT\\MainWindow.xaml.cs",
-              "ToolTip": "D:\\CHUY\u00CAN NG\u00C0NH 5\\PRN212 - Programming With .NET\\QUIZ_PROJECT\\QUIZ_PROJECT\\MainWindow.xaml.cs",
-              "RelativeToolTip": "QUIZ_PROJECT\\MainWindow.xaml.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAArAAAAAAAAAA==",
+              "DocumentIndex": 2,
+              "Title": "Question.cs",
+              "DocumentMoniker": "D:\\CHUY\u00CAN NG\u00C0NH 5\\PRN212 - Programming With .NET\\QUIZ_PROJECT\\DataAccess\\Models\\Question.cs",
+              "RelativeDocumentMoniker": "DataAccess\\Models\\Question.cs",
+              "ToolTip": "D:\\CHUY\u00CAN NG\u00C0NH 5\\PRN212 - Programming With .NET\\QUIZ_PROJECT\\DataAccess\\Models\\Question.cs",
+              "RelativeToolTip": "DataAccess\\Models\\Question.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-04T14:23:34.54Z",
+              "WhenOpened": "2024-11-05T07:46:36.415Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "UsersPage.xaml.cs",
+              "DocumentMoniker": "D:\\CHUY\u00CAN NG\u00C0NH 5\\PRN212 - Programming With .NET\\QUIZ_PROJECT\\QUIZ_PROJECT\\UsersPage.xaml.cs",
+              "RelativeDocumentMoniker": "QUIZ_PROJECT\\UsersPage.xaml.cs",
+              "ToolTip": "D:\\CHUY\u00CAN NG\u00C0NH 5\\PRN212 - Programming With .NET\\QUIZ_PROJECT\\QUIZ_PROJECT\\UsersPage.xaml.cs",
+              "RelativeToolTip": "QUIZ_PROJECT\\UsersPage.xaml.cs",
+              "ViewState": "AgIAADIAAAAAAAAAAAAowGAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-05T07:12:55.885Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
               "Title": "LoginWindow.xaml.cs",
               "DocumentMoniker": "D:\\CHUY\u00CAN NG\u00C0NH 5\\PRN212 - Programming With .NET\\QUIZ_PROJECT\\QUIZ_PROJECT\\LoginWindow.xaml.cs",
               "RelativeDocumentMoniker": "QUIZ_PROJECT\\LoginWindow.xaml.cs",
-              "ToolTip": "D:\\CHUY\u00CAN NG\u00C0NH 5\\PRN212 - Programming With .NET\\QUIZ_PROJECT\\QUIZ_PROJECT\\LoginWindow.xaml.cs*",
-              "RelativeToolTip": "QUIZ_PROJECT\\LoginWindow.xaml.cs*",
-              "ViewState": "AgIAAC4AAAAAAAAAAAAYwEcAAAAdAAAAAAAAAA==",
+              "ToolTip": "D:\\CHUY\u00CAN NG\u00C0NH 5\\PRN212 - Programming With .NET\\QUIZ_PROJECT\\QUIZ_PROJECT\\LoginWindow.xaml.cs",
+              "RelativeToolTip": "QUIZ_PROJECT\\LoginWindow.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAAaAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-04T17:27:54.098Z",
+              "WhenOpened": "2024-11-05T06:56:00.725Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "MainWindow.xaml",
-              "DocumentMoniker": "D:\\CHUY\u00CAN NG\u00C0NH 5\\PRN212 - Programming With .NET\\QUIZ_PROJECT\\QUIZ_PROJECT\\MainWindow.xaml",
-              "RelativeDocumentMoniker": "QUIZ_PROJECT\\MainWindow.xaml",
-              "ToolTip": "D:\\CHUY\u00CAN NG\u00C0NH 5\\PRN212 - Programming With .NET\\QUIZ_PROJECT\\QUIZ_PROJECT\\MainWindow.xaml",
-              "RelativeToolTip": "QUIZ_PROJECT\\MainWindow.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-11-04T14:23:34.908Z",
+              "Title": "HomePage.xaml.cs",
+              "DocumentMoniker": "D:\\CHUY\u00CAN NG\u00C0NH 5\\PRN212 - Programming With .NET\\QUIZ_PROJECT\\QUIZ_PROJECT\\HomePage.xaml.cs",
+              "RelativeDocumentMoniker": "QUIZ_PROJECT\\HomePage.xaml.cs",
+              "ToolTip": "D:\\CHUY\u00CAN NG\u00C0NH 5\\PRN212 - Programming With .NET\\QUIZ_PROJECT\\QUIZ_PROJECT\\HomePage.xaml.cs",
+              "RelativeToolTip": "QUIZ_PROJECT\\HomePage.xaml.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAAwBwAAAA1AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-05T07:04:00.449Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "TakeQuizPage.xaml.cs",
+              "DocumentMoniker": "D:\\CHUY\u00CAN NG\u00C0NH 5\\PRN212 - Programming With .NET\\QUIZ_PROJECT\\QUIZ_PROJECT\\TakeQuizPage.xaml.cs",
+              "RelativeDocumentMoniker": "QUIZ_PROJECT\\TakeQuizPage.xaml.cs",
+              "ToolTip": "D:\\CHUY\u00CAN NG\u00C0NH 5\\PRN212 - Programming With .NET\\QUIZ_PROJECT\\QUIZ_PROJECT\\TakeQuizPage.xaml.cs",
+              "RelativeToolTip": "QUIZ_PROJECT\\TakeQuizPage.xaml.cs",
+              "ViewState": "AgIAAIEAAAAAAAAAAAApwJoAAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-04T15:51:15.116Z",
               "EditorCaption": ""
             },
             {
@@ -168,216 +172,126 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "HomePage.xaml.cs",
-              "DocumentMoniker": "D:\\CHUY\u00CAN NG\u00C0NH 5\\PRN212 - Programming With .NET\\QUIZ_PROJECT\\QUIZ_PROJECT\\HomePage.xaml.cs",
-              "RelativeDocumentMoniker": "QUIZ_PROJECT\\HomePage.xaml.cs",
-              "ToolTip": "D:\\CHUY\u00CAN NG\u00C0NH 5\\PRN212 - Programming With .NET\\QUIZ_PROJECT\\QUIZ_PROJECT\\HomePage.xaml.cs",
-              "RelativeToolTip": "QUIZ_PROJECT\\HomePage.xaml.cs",
-              "ViewState": "AgIAACIAAAAAAAAAAAAQwC0AAAA4AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-04T17:46:04.463Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "UsersPage.xaml",
-              "DocumentMoniker": "D:\\CHUY\u00CAN NG\u00C0NH 5\\PRN212 - Programming With .NET\\QUIZ_PROJECT\\QUIZ_PROJECT\\UsersPage.xaml",
-              "RelativeDocumentMoniker": "QUIZ_PROJECT\\UsersPage.xaml",
-              "ToolTip": "D:\\CHUY\u00CAN NG\u00C0NH 5\\PRN212 - Programming With .NET\\QUIZ_PROJECT\\QUIZ_PROJECT\\UsersPage.xaml",
-              "RelativeToolTip": "QUIZ_PROJECT\\UsersPage.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-11-04T15:46:28.384Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 6,
-              "Title": "UsersPage.xaml.cs",
-              "DocumentMoniker": "D:\\CHUY\u00CAN NG\u00C0NH 5\\PRN212 - Programming With .NET\\QUIZ_PROJECT\\QUIZ_PROJECT\\UsersPage.xaml.cs",
-              "RelativeDocumentMoniker": "QUIZ_PROJECT\\UsersPage.xaml.cs",
-              "ToolTip": "D:\\CHUY\u00CAN NG\u00C0NH 5\\PRN212 - Programming With .NET\\QUIZ_PROJECT\\QUIZ_PROJECT\\UsersPage.xaml.cs",
-              "RelativeToolTip": "QUIZ_PROJECT\\UsersPage.xaml.cs",
-              "ViewState": "AgIAABIAAAAAAAAAAAAAADAAAAAYAAAAAAAAAA==",
+              "Title": "MainWindow.xaml.cs",
+              "DocumentMoniker": "D:\\CHUY\u00CAN NG\u00C0NH 5\\PRN212 - Programming With .NET\\QUIZ_PROJECT\\QUIZ_PROJECT\\MainWindow.xaml.cs",
+              "RelativeDocumentMoniker": "QUIZ_PROJECT\\MainWindow.xaml.cs",
+              "ToolTip": "D:\\CHUY\u00CAN NG\u00C0NH 5\\PRN212 - Programming With .NET\\QUIZ_PROJECT\\QUIZ_PROJECT\\MainWindow.xaml.cs",
+              "RelativeToolTip": "QUIZ_PROJECT\\MainWindow.xaml.cs",
+              "ViewState": "AgIAACkAAAAAAAAAAAAswEYAAAAfAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-04T15:48:17.285Z",
+              "WhenOpened": "2024-11-05T06:58:59.434Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 5,
-              "Title": "QuizContext.cs",
-              "DocumentMoniker": "D:\\CHUY\u00CAN NG\u00C0NH 5\\PRN212 - Programming With .NET\\QUIZ_PROJECT\\DataAccess\\Models\\QuizContext.cs",
-              "RelativeDocumentMoniker": "DataAccess\\Models\\QuizContext.cs",
-              "ToolTip": "D:\\CHUY\u00CAN NG\u00C0NH 5\\PRN212 - Programming With .NET\\QUIZ_PROJECT\\DataAccess\\Models\\QuizContext.cs",
-              "RelativeToolTip": "DataAccess\\Models\\QuizContext.cs",
-              "ViewState": "AgIAAB8AAAAAAAAAAAArwCoAAAAWAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-04T18:50:45.735Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "App.xaml",
-              "DocumentMoniker": "D:\\CHUY\u00CAN NG\u00C0NH 5\\PRN212 - Programming With .NET\\QUIZ_PROJECT\\QUIZ_PROJECT\\App.xaml",
-              "RelativeDocumentMoniker": "QUIZ_PROJECT\\App.xaml",
-              "ToolTip": "D:\\CHUY\u00CAN NG\u00C0NH 5\\PRN212 - Programming With .NET\\QUIZ_PROJECT\\QUIZ_PROJECT\\App.xaml",
-              "RelativeToolTip": "QUIZ_PROJECT\\App.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-11-04T15:41:49.668Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "ManageQuestionsPage.xaml",
-              "DocumentMoniker": "D:\\CHUY\u00CAN NG\u00C0NH 5\\PRN212 - Programming With .NET\\QUIZ_PROJECT\\QUIZ_PROJECT\\ManageQuestionsPage.xaml",
-              "RelativeDocumentMoniker": "QUIZ_PROJECT\\ManageQuestionsPage.xaml",
-              "ToolTip": "D:\\CHUY\u00CAN NG\u00C0NH 5\\PRN212 - Programming With .NET\\QUIZ_PROJECT\\QUIZ_PROJECT\\ManageQuestionsPage.xaml",
-              "RelativeToolTip": "QUIZ_PROJECT\\ManageQuestionsPage.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-11-04T16:29:10.144Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "TakeQuizPage.xaml.cs",
-              "DocumentMoniker": "D:\\CHUY\u00CAN NG\u00C0NH 5\\PRN212 - Programming With .NET\\QUIZ_PROJECT\\QUIZ_PROJECT\\TakeQuizPage.xaml.cs",
-              "RelativeDocumentMoniker": "QUIZ_PROJECT\\TakeQuizPage.xaml.cs",
-              "ToolTip": "D:\\CHUY\u00CAN NG\u00C0NH 5\\PRN212 - Programming With .NET\\QUIZ_PROJECT\\QUIZ_PROJECT\\TakeQuizPage.xaml.cs",
-              "RelativeToolTip": "QUIZ_PROJECT\\TakeQuizPage.xaml.cs",
-              "ViewState": "AgIAABgAAAAAAAAAAAA1wDAAAAAVAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-04T15:51:15.116Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "LoginWindow.xaml",
-              "DocumentMoniker": "D:\\CHUY\u00CAN NG\u00C0NH 5\\PRN212 - Programming With .NET\\QUIZ_PROJECT\\QUIZ_PROJECT\\LoginWindow.xaml",
-              "RelativeDocumentMoniker": "QUIZ_PROJECT\\LoginWindow.xaml",
-              "ToolTip": "D:\\CHUY\u00CAN NG\u00C0NH 5\\PRN212 - Programming With .NET\\QUIZ_PROJECT\\QUIZ_PROJECT\\LoginWindow.xaml",
-              "RelativeToolTip": "QUIZ_PROJECT\\LoginWindow.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-11-04T17:27:19.384Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "TakeQuizPage.xaml",
-              "DocumentMoniker": "D:\\CHUY\u00CAN NG\u00C0NH 5\\PRN212 - Programming With .NET\\QUIZ_PROJECT\\QUIZ_PROJECT\\TakeQuizPage.xaml",
-              "RelativeDocumentMoniker": "QUIZ_PROJECT\\TakeQuizPage.xaml",
-              "ToolTip": "D:\\CHUY\u00CAN NG\u00C0NH 5\\PRN212 - Programming With .NET\\QUIZ_PROJECT\\QUIZ_PROJECT\\TakeQuizPage.xaml",
-              "RelativeToolTip": "QUIZ_PROJECT\\TakeQuizPage.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-11-04T15:50:14.309Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "ManageQuestionsPage.xaml.cs",
-              "DocumentMoniker": "D:\\CHUY\u00CAN NG\u00C0NH 5\\PRN212 - Programming With .NET\\QUIZ_PROJECT\\QUIZ_PROJECT\\ManageQuestionsPage.xaml.cs",
-              "RelativeDocumentMoniker": "QUIZ_PROJECT\\ManageQuestionsPage.xaml.cs",
-              "ToolTip": "D:\\CHUY\u00CAN NG\u00C0NH 5\\PRN212 - Programming With .NET\\QUIZ_PROJECT\\QUIZ_PROJECT\\ManageQuestionsPage.xaml.cs",
-              "RelativeToolTip": "QUIZ_PROJECT\\ManageQuestionsPage.xaml.cs",
-              "ViewState": "AgIAAFAAAAAAAAAAAAAAAHMAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-04T16:29:31.635Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "QuizzesPage.xaml",
-              "DocumentMoniker": "D:\\CHUY\u00CAN NG\u00C0NH 5\\PRN212 - Programming With .NET\\QUIZ_PROJECT\\QUIZ_PROJECT\\QuizzesPage.xaml",
-              "RelativeDocumentMoniker": "QUIZ_PROJECT\\QuizzesPage.xaml",
-              "ToolTip": "D:\\CHUY\u00CAN NG\u00C0NH 5\\PRN212 - Programming With .NET\\QUIZ_PROJECT\\QUIZ_PROJECT\\QuizzesPage.xaml",
-              "RelativeToolTip": "QUIZ_PROJECT\\QuizzesPage.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-11-04T15:48:47.223Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "QuizzesPage.xaml.cs",
-              "DocumentMoniker": "D:\\CHUY\u00CAN NG\u00C0NH 5\\PRN212 - Programming With .NET\\QUIZ_PROJECT\\QUIZ_PROJECT\\QuizzesPage.xaml.cs",
-              "RelativeDocumentMoniker": "QUIZ_PROJECT\\QuizzesPage.xaml.cs",
-              "ToolTip": "D:\\CHUY\u00CAN NG\u00C0NH 5\\PRN212 - Programming With .NET\\QUIZ_PROJECT\\QUIZ_PROJECT\\QuizzesPage.xaml.cs",
-              "RelativeToolTip": "QUIZ_PROJECT\\QuizzesPage.xaml.cs",
-              "ViewState": "AgIAAC0AAAAAAAAAAAAuwIEAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-04T15:49:38.64Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "CategoriesPage.xaml",
-              "DocumentMoniker": "D:\\CHUY\u00CAN NG\u00C0NH 5\\PRN212 - Programming With .NET\\QUIZ_PROJECT\\QUIZ_PROJECT\\CategoriesPage.xaml",
-              "RelativeDocumentMoniker": "QUIZ_PROJECT\\CategoriesPage.xaml",
-              "ToolTip": "D:\\CHUY\u00CAN NG\u00C0NH 5\\PRN212 - Programming With .NET\\QUIZ_PROJECT\\QUIZ_PROJECT\\CategoriesPage.xaml",
-              "RelativeToolTip": "QUIZ_PROJECT\\CategoriesPage.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-11-04T15:58:51.081Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "CategoriesPage.xaml.cs",
-              "DocumentMoniker": "D:\\CHUY\u00CAN NG\u00C0NH 5\\PRN212 - Programming With .NET\\QUIZ_PROJECT\\QUIZ_PROJECT\\CategoriesPage.xaml.cs",
-              "RelativeDocumentMoniker": "QUIZ_PROJECT\\CategoriesPage.xaml.cs",
-              "ToolTip": "D:\\CHUY\u00CAN NG\u00C0NH 5\\PRN212 - Programming With .NET\\QUIZ_PROJECT\\QUIZ_PROJECT\\CategoriesPage.xaml.cs",
-              "RelativeToolTip": "QUIZ_PROJECT\\CategoriesPage.xaml.cs",
-              "ViewState": "AgIAADIAAAAAAAAAAAAQwBUAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-04T16:00:11.265Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 18,
               "Title": "ResultsPage.xaml.cs",
               "DocumentMoniker": "D:\\CHUY\u00CAN NG\u00C0NH 5\\PRN212 - Programming With .NET\\QUIZ_PROJECT\\QUIZ_PROJECT\\ResultsPage.xaml.cs",
               "RelativeDocumentMoniker": "QUIZ_PROJECT\\ResultsPage.xaml.cs",
               "ToolTip": "D:\\CHUY\u00CAN NG\u00C0NH 5\\PRN212 - Programming With .NET\\QUIZ_PROJECT\\QUIZ_PROJECT\\ResultsPage.xaml.cs",
               "RelativeToolTip": "QUIZ_PROJECT\\ResultsPage.xaml.cs",
-              "ViewState": "AgIAABoAAAAAAAAAAAAzwCoAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAwwB4AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-04T15:52:48.106Z"
+              "WhenOpened": "2024-11-05T07:02:34.478Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 9,
               "Title": "ResultsPage.xaml",
               "DocumentMoniker": "D:\\CHUY\u00CAN NG\u00C0NH 5\\PRN212 - Programming With .NET\\QUIZ_PROJECT\\QUIZ_PROJECT\\ResultsPage.xaml",
               "RelativeDocumentMoniker": "QUIZ_PROJECT\\ResultsPage.xaml",
               "ToolTip": "D:\\CHUY\u00CAN NG\u00C0NH 5\\PRN212 - Programming With .NET\\QUIZ_PROJECT\\QUIZ_PROJECT\\ResultsPage.xaml",
               "RelativeToolTip": "QUIZ_PROJECT\\ResultsPage.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-11-04T15:51:44.486Z"
+              "WhenOpened": "2024-11-05T07:16:10.783Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
-              "Title": "DataAccess.csproj",
-              "DocumentMoniker": "D:\\CHUY\u00CAN NG\u00C0NH 5\\PRN212 - Programming With .NET\\QUIZ_PROJECT\\DataAccess\\DataAccess.csproj",
-              "RelativeDocumentMoniker": "DataAccess\\DataAccess.csproj",
-              "ToolTip": "D:\\CHUY\u00CAN NG\u00C0NH 5\\PRN212 - Programming With .NET\\QUIZ_PROJECT\\DataAccess\\DataAccess.csproj",
-              "RelativeToolTip": "DataAccess\\DataAccess.csproj",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABwAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2024-11-04T14:24:52.678Z"
+              "DocumentIndex": 8,
+              "Title": "UsersPage.xaml",
+              "DocumentMoniker": "D:\\CHUY\u00CAN NG\u00C0NH 5\\PRN212 - Programming With .NET\\QUIZ_PROJECT\\QUIZ_PROJECT\\UsersPage.xaml",
+              "RelativeDocumentMoniker": "QUIZ_PROJECT\\UsersPage.xaml",
+              "ToolTip": "D:\\CHUY\u00CAN NG\u00C0NH 5\\PRN212 - Programming With .NET\\QUIZ_PROJECT\\QUIZ_PROJECT\\UsersPage.xaml",
+              "RelativeToolTip": "QUIZ_PROJECT\\UsersPage.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-11-05T07:32:46.601Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "D:\\CHUY\u00CAN NG\u00C0NH 5\\PRN212 - Programming With .NET\\QUIZ_PROJECT\\DataAccess\\appsettings.json",
-              "RelativeDocumentMoniker": "DataAccess\\appsettings.json",
-              "ToolTip": "D:\\CHUY\u00CAN NG\u00C0NH 5\\PRN212 - Programming With .NET\\QUIZ_PROJECT\\DataAccess\\appsettings.json",
-              "RelativeToolTip": "DataAccess\\appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-11-04T15:10:57.612Z"
+              "DocumentIndex": 10,
+              "Title": "QuizzesPage.xaml",
+              "DocumentMoniker": "D:\\CHUY\u00CAN NG\u00C0NH 5\\PRN212 - Programming With .NET\\QUIZ_PROJECT\\QUIZ_PROJECT\\QuizzesPage.xaml",
+              "RelativeDocumentMoniker": "QUIZ_PROJECT\\QuizzesPage.xaml",
+              "ToolTip": "D:\\CHUY\u00CAN NG\u00C0NH 5\\PRN212 - Programming With .NET\\QUIZ_PROJECT\\QUIZ_PROJECT\\QuizzesPage.xaml",
+              "RelativeToolTip": "QUIZ_PROJECT\\QuizzesPage.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-11-05T07:26:08.366Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Student.cs",
+              "DocumentMoniker": "D:\\CHUY\u00CAN NG\u00C0NH 5\\PRN212 - Programming With .NET\\QUIZ_PROJECT\\DataAccess\\Models\\Student.cs",
+              "RelativeDocumentMoniker": "DataAccess\\Models\\Student.cs",
+              "ToolTip": "D:\\CHUY\u00CAN NG\u00C0NH 5\\PRN212 - Programming With .NET\\QUIZ_PROJECT\\DataAccess\\Models\\Student.cs",
+              "RelativeToolTip": "DataAccess\\Models\\Student.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-05T07:07:48.437Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "TakeQuizPage.xaml",
+              "DocumentMoniker": "D:\\CHUY\u00CAN NG\u00C0NH 5\\PRN212 - Programming With .NET\\QUIZ_PROJECT\\QUIZ_PROJECT\\TakeQuizPage.xaml",
+              "RelativeDocumentMoniker": "QUIZ_PROJECT\\TakeQuizPage.xaml",
+              "ToolTip": "D:\\CHUY\u00CAN NG\u00C0NH 5\\PRN212 - Programming With .NET\\QUIZ_PROJECT\\QUIZ_PROJECT\\TakeQuizPage.xaml",
+              "RelativeToolTip": "QUIZ_PROJECT\\TakeQuizPage.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-11-04T15:50:14.309Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "Answer.cs",
+              "DocumentMoniker": "D:\\CHUY\u00CAN NG\u00C0NH 5\\PRN212 - Programming With .NET\\QUIZ_PROJECT\\DataAccess\\Models\\Answer.cs",
+              "RelativeDocumentMoniker": "DataAccess\\Models\\Answer.cs",
+              "ToolTip": "D:\\CHUY\u00CAN NG\u00C0NH 5\\PRN212 - Programming With .NET\\QUIZ_PROJECT\\DataAccess\\Models\\Answer.cs",
+              "RelativeToolTip": "DataAccess\\Models\\Answer.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-05T05:13:24.132Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "ManageQuestionsPage.xaml",
+              "DocumentMoniker": "D:\\CHUY\u00CAN NG\u00C0NH 5\\PRN212 - Programming With .NET\\QUIZ_PROJECT\\QUIZ_PROJECT\\ManageQuestionsPage.xaml",
+              "RelativeDocumentMoniker": "QUIZ_PROJECT\\ManageQuestionsPage.xaml",
+              "ToolTip": "D:\\CHUY\u00CAN NG\u00C0NH 5\\PRN212 - Programming With .NET\\QUIZ_PROJECT\\QUIZ_PROJECT\\ManageQuestionsPage.xaml",
+              "RelativeToolTip": "QUIZ_PROJECT\\ManageQuestionsPage.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-11-04T16:29:10.144Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "ManageQuestionsPage.xaml.cs",
+              "DocumentMoniker": "D:\\CHUY\u00CAN NG\u00C0NH 5\\PRN212 - Programming With .NET\\QUIZ_PROJECT\\QUIZ_PROJECT\\ManageQuestionsPage.xaml.cs",
+              "RelativeDocumentMoniker": "QUIZ_PROJECT\\ManageQuestionsPage.xaml.cs",
+              "ToolTip": "D:\\CHUY\u00CAN NG\u00C0NH 5\\PRN212 - Programming With .NET\\QUIZ_PROJECT\\QUIZ_PROJECT\\ManageQuestionsPage.xaml.cs",
+              "RelativeToolTip": "QUIZ_PROJECT\\ManageQuestionsPage.xaml.cs",
+              "ViewState": "AgIAACsAAAAAAAAAAAAAwLYAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-04T16:29:31.635Z"
             }
           ]
         }

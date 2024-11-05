@@ -12,16 +12,22 @@ namespace QUIZ_PROJECT
     {
         private QuizContext _context;
         private Dictionary<int, int> _selectedAnswers; // Stores question ID and selected answer ID pairs
+        private List<Question> _questions; // Holds all questions for the selected quiz
+        private int _currentQuestionIndex; // Tracks the current question index
+        private int _userId; // Stores the user ID of the logged-in user
 
-        public TakeQuizPage()
+        public TakeQuizPage(int userId)
         {
             InitializeComponent();
             _context = new QuizContext();
             _selectedAnswers = new Dictionary<int, int>();
+            _questions = new List<Question>();
+            _currentQuestionIndex = 0;
+            _userId = userId; // Initialize user ID
+
             LoadQuizzes();
         }
 
-        // Load quizzes into the ComboBox
         private void LoadQuizzes()
         {
             QuizComboBox.ItemsSource = _context.Quizzes.ToList();
@@ -29,81 +35,122 @@ namespace QUIZ_PROJECT
             QuizComboBox.SelectedValuePath = "Id";
         }
 
-        // When a quiz is selected, load its questions and answers
         private void QuizComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             if (QuizComboBox.SelectedValue is int quizId)
             {
-                // Load quiz details (title and instructions)
                 var quiz = _context.Quizzes.Include(q => q.Category).FirstOrDefault(q => q.Id == quizId);
                 if (quiz != null)
                 {
                     QuizTitleText.Text = quiz.Title;
-                    if (quiz.Duration.HasValue)
-                    {
-                        QuizInstructions.Text = $"Category: {quiz.Category?.Name} - Duration: {quiz.Duration.Value.Hour} hours and {quiz.Duration.Value.Minute} minutes";
-                    }
-                    else
-                    {
-                        QuizInstructions.Text = $"Category: {quiz.Category?.Name} - Duration: Not specified";
-                    }
+                    QuizInstructions.Text = quiz.Duration.HasValue
+? $"Category: {quiz.Category?.Name} - Duration: {quiz.Duration.Value.Hour} hours and {quiz.Duration.Value.Minute} minutes"
+: $"Category: {quiz.Category?.Name} - Duration: Not specified";
 
+                    LoadQuestions(quizId);
                 }
-
-                // Load questions for the selected quiz
-                LoadQuestions(quizId);
             }
         }
 
-        // Load questions and answers for the selected quiz
         private void LoadQuestions(int quizId)
         {
-            var questions = _context.Questions
-                                    .Where(q => q.QuizId == quizId)
-                                    .Include(q => q.Answers)
-                                    .ToList();
-
-            // Bind questions to the ItemsControl
-            QuestionsItemsControl.ItemsSource = questions;
-
-            // Clear previously selected answers
+            _questions = _context.Questions
+                                 .Where(q => q.QuizId == quizId)
+                                 .Include(q => q.Answers)
+                                 .ToList();
+            _currentQuestionIndex = 0;
+            ShowCurrentQuestion();
             _selectedAnswers.Clear();
         }
 
-        // Submit quiz and calculate score
-        private void SubmitQuiz_Click(object sender, RoutedEventArgs e)
+        private void ShowCurrentQuestion()
         {
-            var result = MessageBox.Show("Are you sure you want to submit the quiz?", "Submit Quiz", MessageBoxButton.YesNo);
-            if (result == MessageBoxResult.Yes)
+            if (_questions.Any() && _currentQuestionIndex >= 0 && _currentQuestionIndex < _questions.Count)
             {
-                // Calculate and save the score
-                int score = 0;
-                foreach (var question in QuestionsItemsControl.Items)
-                {
-                    if (question is Question q && _selectedAnswers.TryGetValue(q.Id, out int selectedAnswerId))
-                    {
-                        if (q.Answers.Any(a => a.Id == selectedAnswerId && a.IsCorrect))
-                        {
-                            score++;
-                        }
-                    }
-                }
+                var currentQuestion = _questions[_currentQuestionIndex];
+                QuestionText.Text = currentQuestion.Text;
 
-                MessageBox.Show($"Your score is: {score} out of {QuestionsItemsControl.Items.Count}");
-                SaveQuizResult(score);
+                var labels = new[] { "A", "B", "C", "D" };
+                var answerOptions = currentQuestion.Answers
+                    .Select((answer, index) => new AnswerOption
+                    {
+                        Label = labels[index],
+                        AnswerId = answer.Id,
+                        Text = answer.Text,
+                        IsChecked = _selectedAnswers.ContainsKey(currentQuestion.Id) && _selectedAnswers[currentQuestion.Id] == answer.Id
+                    })
+                    .ToList();
+
+                AnswersItemsControl.ItemsSource = answerOptions;
             }
         }
 
-        // Save the quiz result in the Mark table
-        private void SaveQuizResult(int score)
+        private void AnswerRadioButton_Checked(object sender, RoutedEventArgs e)
+        {
+            if (sender is RadioButton radioButton && radioButton.Tag is int answerId)
+            {
+                var questionId = _questions[_currentQuestionIndex].Id;
+                _selectedAnswers[questionId] = answerId;
+            }
+        }
+
+        private void PreviousButton_Click(object sender, RoutedEventArgs e)
+        {
+            if (_currentQuestionIndex > 0)
+            {
+                _currentQuestionIndex--;
+                ShowCurrentQuestion();
+            }
+        }
+
+        private void NextButton_Click(object sender, RoutedEventArgs e)
+        {
+            if (_currentQuestionIndex < _questions.Count - 1)
+            {
+                _currentQuestionIndex++;
+                ShowCurrentQuestion();
+            }
+        }
+
+        private void SubmitQuiz_Click(object sender, RoutedEventArgs e)
+        {
+            double score = CalculateScore(); // Get the score on a 10-point scale
+            MessageBox.Show($"Your score is: {score} out of 10");
+            SaveQuizResult(score);
+        }
+
+        private double CalculateScore()
+        {
+            int correctAnswers = 0;
+            foreach (var question in _questions)
+            {
+                if (_selectedAnswers.TryGetValue(question.Id, out int selectedAnswerId) && question.CorrectAnswerId == selectedAnswerId)
+                {
+                    correctAnswers++;
+                }
+            }
+
+            // Calculate the score on a 10-point scale
+            double scoreOn10Scale = (correctAnswers / (double)_questions.Count) * 10;
+            return Math.Round(scoreOn10Scale, 2); // Round to 2 decimal places for better presentation
+        }
+
+        private void SaveQuizResult(double score)
         {
             if (QuizComboBox.SelectedValue is int quizId)
             {
+                int studentId = GetCurrentStudentId(_userId);
+                if (studentId == 0)
+                {
+                    MessageBox.Show("No valid student found. Please log in or create a student profile.");
+                    return;
+                }
+
                 var mark = new Mark
                 {
-                    StudentId = GetCurrentStudentId(), // Retrieve the logged-in student ID
+                    StudentId = studentId,
                     QuizId = quizId,
-                    Score = score,
+                    Score = (decimal)score, // Save the score on a 10-point scale
                     DateTaken = DateTime.Now
                 };
 
@@ -111,31 +158,30 @@ namespace QUIZ_PROJECT
                 {
                     _context.Marks.Add(mark);
                     _context.SaveChanges();
-                    MessageBox.Show("Your result has been saved!");
+                    MessageBox.Show("Your result has been saved successfully!");
                 }
                 catch (DbUpdateException ex)
                 {
                     MessageBox.Show($"An error occurred while saving your results: {ex.InnerException?.Message}");
                 }
             }
-        }
-
-        // Placeholder for actual authentication logic to get current student ID
-        private int GetCurrentStudentId()
-        {
-            // Replace with actual student ID logic. Here, we retrieve the first student ID as an example.
-            return _context.Students.Select(s => s.Id).FirstOrDefault();
-        }
-
-        // Capture selected answer in _selectedAnswers dictionary
-        private void RadioButton_Checked(object sender, RoutedEventArgs e)
-        {
-            if (sender is RadioButton radioButton && radioButton.DataContext is Answer answer)
+            else
             {
-                if ((radioButton.DataContext as Answer)?.Question is Question question)
-                {
-                    _selectedAnswers[question.Id] = answer.Id;
-                }
+                MessageBox.Show("Please select a quiz before submitting.");
+            }
+        }
+
+        private int GetCurrentStudentId(int userId)
+        {
+            var student = _context.Students
+                                  .FirstOrDefault(s => s.UserId == userId);
+            if (student != null)
+            {
+                return student.Id;
+            }
+            else
+            {
+                return 0;
             }
         }
     }

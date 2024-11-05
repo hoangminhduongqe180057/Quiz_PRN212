@@ -6,7 +6,8 @@ CREATE TABLE [User] (
     Id INT PRIMARY KEY IDENTITY,
     Username NVARCHAR(100) NOT NULL,
     Password NVARCHAR(255) NOT NULL,
-    Role NVARCHAR(50) NOT NULL -- E.g., "Admin", "Teacher", "Student"
+    Role NVARCHAR(50) NOT NULL -- E.g., "Admin", "Teacher", "Student",
+	,[Name] NVARCHAR(100) NULL
 );
 
 -- Table for Student, with foreign key to User
@@ -56,8 +57,16 @@ CREATE TABLE Mark (
     Id INT PRIMARY KEY IDENTITY,
     StudentId INT NOT NULL,
     QuizId INT NOT NULL,
-    Score INT NOT NULL,
+    Score Decimal(5,2) NOT NULL,
     DateTaken DATETIME NOT NULL,
     FOREIGN KEY (StudentId) REFERENCES Student(Id),
     FOREIGN KEY (QuizId) REFERENCES Quiz(Id)
 );
+
+CREATE TABLE AnswerOption (
+    Label NVARCHAR(10) NOT NULL,          -- Label like 'A', 'B', 'C', 'D', etc.
+    AnswerId INT PRIMARY KEY IDENTITY,     -- Unique identifier for the answer
+    Text NVARCHAR(200) NOT NULL,           -- Text content of the answer option
+    IsChecked BIT NOT NULL DEFAULT 0       -- Boolean to mark if the option is checked
+);
+

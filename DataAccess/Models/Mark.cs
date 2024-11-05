@@ -11,7 +11,7 @@ public partial class Mark
 
     public int QuizId { get; set; }
 
-    public int Score { get; set; }
+    public decimal? Score { get; set; }
 
     public DateTime DateTaken { get; set; }
 
