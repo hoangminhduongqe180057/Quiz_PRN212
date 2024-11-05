@@ -35,7 +35,7 @@ namespace QUIZ_PROJECT
             UsersButton.Visibility = (UserRole == "Admin") ? Visibility.Visible : Visibility.Collapsed;
         }
 
-        private void ToggleMenuVisibility(bool isVisible)
+        public void ToggleMenuVisibility(bool isVisible)
         {
             if (UserRole == "Student") // Apply restrictions only for students
             {
@@ -52,6 +52,7 @@ namespace QUIZ_PROJECT
                 UsersButton.Visibility = Visibility.Collapsed;
             }
         }
+
 
 
         private void TakeQuizButton_Click(object sender, RoutedEventArgs e)

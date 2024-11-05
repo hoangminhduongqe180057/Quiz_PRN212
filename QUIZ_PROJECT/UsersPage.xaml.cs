@@ -146,6 +146,7 @@ namespace QUIZ_PROJECT
             UsernameTextBox.Text = string.Empty;
             PasswordTextBox.Password = string.Empty;
             RoleComboBox.SelectedIndex = -1;
+            NameTextBox.Text = string.Empty; ;
         }
     }
 }

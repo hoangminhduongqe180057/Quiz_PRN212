@@ -120,7 +120,6 @@ namespace QUIZ_PROJECT
             if (result == MessageBoxResult.Yes)
             {
                 double score = CalculateScore();
-                MessageBox.Show($"Your score is: {score} out of 10");
                 SaveQuizResult(score);
 
                 // Call EndQuiz on MainWindow to re-enable the menu
@@ -170,7 +169,6 @@ namespace QUIZ_PROJECT
                 {
                     _context.Marks.Add(mark);
                     _context.SaveChanges();
-                    MessageBox.Show("Your result has been saved successfully!");
                 }
                 catch (DbUpdateException ex)
                 {

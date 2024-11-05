@@ -7,14 +7,14 @@ namespace QUIZ_PROJECT
     {
         private string UserRole;
         private string UserName;
-        private int UserId; 
+        private int UserId;
 
         public HomePage(string userRole, string userName, int userId)
         {
             InitializeComponent();
             UserRole = userRole;
             UserName = userName;
-            UserId = userId; // Store userId
+            UserId = userId;
 
             // Set the role icon based on userRole
             string roleIcon = userRole switch
@@ -33,7 +33,6 @@ namespace QUIZ_PROJECT
 
         private void SetSectionVisibility()
         {
-            // Admin: All sections visible
             if (UserRole == "Admin")
             {
                 ManageUsersSection.Visibility = Visibility.Visible;
@@ -41,7 +40,6 @@ namespace QUIZ_PROJECT
                 TakeQuizSection.Visibility = Visibility.Visible;
                 ViewResultsSection.Visibility = Visibility.Visible;
             }
-            // Teacher: All sections except "Manage Users"
             else if (UserRole == "Teacher")
             {
                 ManageUsersSection.Visibility = Visibility.Collapsed;
@@ -49,7 +47,6 @@ namespace QUIZ_PROJECT
                 TakeQuizSection.Visibility = Visibility.Visible;
                 ViewResultsSection.Visibility = Visibility.Visible;
             }
-            // Student: Only "Take Quiz" and "View Results" sections
             else if (UserRole == "Student")
             {
                 ManageUsersSection.Visibility = Visibility.Collapsed;
@@ -71,10 +68,16 @@ namespace QUIZ_PROJECT
 
         private void StartQuiz_Click(object sender, RoutedEventArgs e)
         {
-            // Get a reference to the MainWindow and pass it along with the UserId
             var mainWindow = Window.GetWindow(this) as MainWindow;
             if (mainWindow != null)
             {
+                // Hide the menu in MainWindow when the student starts a quiz
+                if (UserRole == "Student")
+                {
+                    mainWindow.ToggleMenuVisibility(false); // Hide the menu for students
+                }
+
+                // Navigate to TakeQuizPage and pass MainWindow reference and UserId
                 NavigationService.Navigate(new TakeQuizPage(mainWindow, UserId));
             }
             else
@@ -83,10 +86,8 @@ namespace QUIZ_PROJECT
             }
         }
 
-
         private void GoToResults_Click(object sender, RoutedEventArgs e)
         {
-            // Pass UserName, UserRole, and UserId to ResultsPage
             NavigationService.Navigate(new ResultsPage(UserName, UserRole, UserId));
         }
     }
