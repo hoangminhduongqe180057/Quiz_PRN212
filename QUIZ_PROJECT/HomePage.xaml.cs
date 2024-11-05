@@ -71,14 +71,23 @@ namespace QUIZ_PROJECT
 
         private void StartQuiz_Click(object sender, RoutedEventArgs e)
         {
-            // Pass UserId to TakeQuizPage
-            NavigationService.Navigate(new TakeQuizPage(UserId));
+            // Get a reference to the MainWindow and pass it along with the UserId
+            var mainWindow = Window.GetWindow(this) as MainWindow;
+            if (mainWindow != null)
+            {
+                NavigationService.Navigate(new TakeQuizPage(mainWindow, UserId));
+            }
+            else
+            {
+                MessageBox.Show("Error: MainWindow not found.");
+            }
         }
+
 
         private void GoToResults_Click(object sender, RoutedEventArgs e)
         {
-            // Pass UserName to ResultsPage
-            NavigationService.Navigate(new ResultsPage(UserName));
+            // Pass UserName, UserRole, and UserId to ResultsPage
+            NavigationService.Navigate(new ResultsPage(UserName, UserRole, UserId));
         }
     }
 }

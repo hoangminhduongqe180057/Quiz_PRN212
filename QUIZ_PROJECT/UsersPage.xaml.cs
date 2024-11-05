@@ -61,7 +61,7 @@ namespace QUIZ_PROJECT
                     var student = new Student
                     {
                         Name = NameTextBox.Text, // Use the NameTextBox for Student Name
-                        Email = $"{user.Username}@example.com", // Or capture email if it's available
+                        Email = $"{user.Username}@fpt.edu.vn", // Or capture email if it's available
                         UserId = user.Id // Link the Student to the created User
                     };
 

@@ -15,10 +15,11 @@ namespace QUIZ_PROJECT
         private List<Question> _questions; // Holds all questions for the selected quiz
         private int _currentQuestionIndex; // Tracks the current question index
         private int _userId; // Stores the user ID of the logged-in user
-
-        public TakeQuizPage(int userId)
+        private MainWindow _mainWindow;
+        public TakeQuizPage(MainWindow mainWindow, int userId)
         {
             InitializeComponent();
+            _mainWindow = mainWindow;
             _context = new QuizContext();
             _selectedAnswers = new Dictionary<int, int>();
             _questions = new List<Question>();
@@ -114,10 +115,21 @@ namespace QUIZ_PROJECT
 
         private void SubmitQuiz_Click(object sender, RoutedEventArgs e)
         {
-            double score = CalculateScore(); // Get the score on a 10-point scale
-            MessageBox.Show($"Your score is: {score} out of 10");
-            SaveQuizResult(score);
+            var result = MessageBox.Show("Are you sure you want to submit your answers?", "Confirm Submission", MessageBoxButton.YesNo, MessageBoxImage.Question);
+
+            if (result == MessageBoxResult.Yes)
+            {
+                double score = CalculateScore();
+                MessageBox.Show($"Your score is: {score} out of 10");
+                SaveQuizResult(score);
+
+                // Call EndQuiz on MainWindow to re-enable the menu
+                _mainWindow.EndQuiz();
+            }
         }
+
+
+
 
         private double CalculateScore()
         {

@@ -1,44 +1,46 @@
 ﻿using DataAccess.Models;
 using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 
 namespace QUIZ_PROJECT
 {
-    /// <summary>
-    /// Interaction logic for ResultsPage.xaml
-    /// </summary>
     public partial class ResultsPage : Page
     {
         private QuizContext _context;
         private string _userName;
+        private string _userRole;
+        private int _userId;
 
-        public ResultsPage(string userName)
+        public ResultsPage(string userName, string userRole, int userId)
         {
             InitializeComponent();
             _userName = userName;
+            _userRole = userRole;
+            _userId = userId;
             _context = new QuizContext();
             LoadResults();
         }
 
         private void LoadResults()
         {
-            ResultsDataGrid.ItemsSource = _context.Marks
-                .Include(m => m.Student)
-                .Include(m => m.Quiz)
-                .ToList();
+            if (_userRole == "Student")
+            {
+                // Only load results for the current student
+                ResultsDataGrid.ItemsSource = _context.Marks
+                    .Include(m => m.Student)
+                    .Include(m => m.Quiz)
+                    .Where(m => m.Student.UserId == _userId)
+                    .ToList();
+            }
+            else
+            {
+                // Load all results for Admin or Teacher roles
+                ResultsDataGrid.ItemsSource = _context.Marks
+                    .Include(m => m.Student)
+                    .Include(m => m.Quiz)
+                    .ToList();
+            }
         }
     }
 }

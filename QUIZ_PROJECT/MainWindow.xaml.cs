@@ -8,6 +8,7 @@ namespace QUIZ_PROJECT
         public string UserRole { get; set; }
         private string UserName { get; set; }
         private int UserId { get; set; }
+        private bool IsTakingQuiz { get; set; } // Flag to track if the user is taking a quiz
 
         public MainWindow(string userRole, string userName, int userId)
         {
@@ -34,44 +35,90 @@ namespace QUIZ_PROJECT
             UsersButton.Visibility = (UserRole == "Admin") ? Visibility.Visible : Visibility.Collapsed;
         }
 
-        private void HomeButton_Click(object sender, RoutedEventArgs e)
+        private void ToggleMenuVisibility(bool isVisible)
         {
-            MainContent.Navigate(new HomePage(UserRole, UserName, UserId)); // Pass UserId as the third parameter
+            if (UserRole == "Student") // Apply restrictions only for students
+            {
+                Visibility visibility = isVisible ? Visibility.Visible : Visibility.Collapsed;
+
+                HomeButton.Visibility = visibility;
+                TakeQuizButton.Visibility = visibility;
+                ResultsButton.Visibility = visibility;
+                LogoutButton.Visibility = visibility;
+
+                // Hide these options entirely for students while taking the quiz
+                CategoriesButton.Visibility = Visibility.Collapsed;
+                QuizzesButton.Visibility = Visibility.Collapsed;
+                UsersButton.Visibility = Visibility.Collapsed;
+            }
         }
 
-        private void UsersButton_Click(object sender, RoutedEventArgs e)
-        {
-            MainContent.Navigate(new UsersPage()); // Ensure UsersPage is implemented correctly
-        }
-
-        private void CategoriesButton_Click(object sender, RoutedEventArgs e)
-        {
-            MainContent.Navigate(new CategoriesPage()); // Ensure CategoriesPage is implemented correctly
-        }
-
-        private void QuizzesButton_Click(object sender, RoutedEventArgs e)
-        {
-            MainContent.Navigate(new QuizzesPage()); // Ensure QuizzesPage is implemented correctly
-        }
 
         private void TakeQuizButton_Click(object sender, RoutedEventArgs e)
         {
-            MainContent.Navigate(new TakeQuizPage(UserId)); // Pass UserId to TakeQuizPage
+            if (UserRole == "Student")
+            {
+                IsTakingQuiz = true; // Set flag to indicate quiz mode
+                ToggleMenuVisibility(false); // Hide the menu for the student role
+            }
+            MainContent.Navigate(new TakeQuizPage(this, UserId)); // Pass MainWindow reference and UserId to TakeQuizPage
+        }
+
+
+
+        // Method to re-enable navigation for students after quiz submission
+        public void EndQuiz()
+        {
+            if (UserRole == "Student")
+            {
+                IsTakingQuiz = false;
+                ToggleMenuVisibility(true); // Show the menu again for students
+            }
+        }
+
+        private void HomeButton_Click(object sender, RoutedEventArgs e)
+        {
+            if (!IsTakingQuiz || UserRole != "Student")
+            {
+                MainContent.Navigate(new HomePage(UserRole, UserName, UserId));
+            }
         }
 
         private void ResultsButton_Click(object sender, RoutedEventArgs e)
         {
-            MainContent.Navigate(new ResultsPage(UserName)); // Pass UserName to ResultsPage
+            if (!IsTakingQuiz || UserRole != "Student")
+            {
+                MainContent.Navigate(new ResultsPage(UserName, UserRole, UserId)); // Pass UserRole and UserId to ResultsPage
+            }
         }
+
 
         private void LogoutButton_Click(object sender, RoutedEventArgs e)
         {
-            // Open LoginWindow
-            LoginWindow loginWindow = new LoginWindow();
-            loginWindow.Show();
+            if (!IsTakingQuiz || UserRole != "Student")
+            {
+                LoginWindow loginWindow = new LoginWindow();
+                loginWindow.Show();
+                this.Close();
+            }
+        }
 
-            // Close MainWindow
-            this.Close();
+        private void UsersButton_Click(object sender, RoutedEventArgs e)
+        {
+            // Navigate to UsersPage
+            MainContent.Navigate(new UsersPage());
+        }
+
+        private void CategoriesButton_Click(object sender, RoutedEventArgs e)
+        {
+            // Navigate to CategoriesPage
+            MainContent.Navigate(new CategoriesPage());
+        }
+
+        private void QuizzesButton_Click(object sender, RoutedEventArgs e)
+        {
+            // Navigate to QuizzesPage
+            MainContent.Navigate(new QuizzesPage());
         }
     }
 }
